@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+.aboutBody {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1d1d1d;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* height: auto; */
+}
+
+.aboutContainer {
+    background-color: #1d1d1d;
+    width: 97%;
+    height: 100%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    height: auto;
+    
+    justify-content: center;
+    position: relative;
+    /* justify-content: center; */
+    align-items: center;
+    color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+.infoContainer {
+    width: 58%;
+    /* background-color: blue; */
+    height: 60%;
+    display: flex;
+
+}
+
+.profilePicture {
+    width: 45%;
+    height: 100%;
+    /* background-color: green; */
+    position: relative;
+}
+
+.profilePicture img {
+    /* object-fit: contain; */
+    width: 64%;
+    height: 70%;
+    margin-top: 1em;
+    position: absolute;
+    right: 4em;
+    bottom: 4em;
+    z-index: 2;
+
+
+    border-inline-start: 4px solid;
+    border-block-start: 4px solid;
+    border-image-source: radial-gradient(circle at top left,
+            #0bd3b4,
+            transparent 30%);
+    border-image-slice: 1;
+    padding-top: 1em;
+    padding-left: 1em;
+    transition: right 1s;
+}
+
+.profilePicture:hover img {
+    right: 5em;
+}
+
+.profilePicture .layout {
+    background-color: #0bd3b4;
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    bottom: 3em;
+    right: 3em;
+    z-index: 1;
+    transition: bottom 1s;
+}
+
+.profilePicture:hover .layout {
+    bottom: 2em;
+}
+
+.profilePicture .border {
+    background-color: #0bd3b4;
+
+    position: absolute;
+}
+
+.infoContainer .infoText {
+    /* background-color: red; */
+    width: 48%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+ 
+
+}
+
+.infoText button {
+    background-color: transparent;
+    color: #0bd3b4;
+    border: .1em solid #0bd3b4;
+    font-size: 1.2em;
+ 
+}
+
+.infoText .details {
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: red; */
+    padding: 1em 1em 1em 0;
+    gap: .5em;
+
+    border-block-start: 4px solid;
+    border-image-source: radial-gradient(circle at top left,
+            #0bd3b4,
+            transparent 80%);
+    border-image-slice: 1;
+ 
+
+}
+
+.details .detailCard {
+    display: flex;
+    gap: .5em;
+    align-items: center;
+}
+
+.detailCard div {
+    color: #0bd3b4;
+}
+.cubeContainer {
+    width: 40%;
+}
+
+@media screen and (min-width:414px) and (max-width:668px) {
+    .infoContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        /* height: auto; */
+        /* background-color: red; */
+        align-items: center;
+    }
+    .profilePicture {
+        background-color: red;
+        height: 50em;
+        width: 50%;
+        position: relative;
+        margin-top: 5em;
+    }
+    .profilePicture .layout {
+        position: absolute;
+        bottom: 1em;
+        right: 1em;
+        width: 50%;
+        height: 10em;
+        z-index: 1;
+        /* background-color: red; */
+    }
+
+    .profilePicture img {
+        /* object-fit: contain; */
+        width: 90%;
+        /* height: 100%; */
+        height: 17em;
+        margin-top: 5em;
+        position: absolute;
+        right: 2em;
+        bottom: 2em;
+
+
+    }
+
+    .infoContainer .infoText {
+        width: 70%;
+        height: auto;
+        margin-top: 0em;
+    }
+    .aboutContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 25em;
+        overflow-y: scroll;
+        /* flex-direction: column; */
+        /* gap:10em;? */
+        /* background-color: red; */
+    }
+    .cubeContainer {
+        margin-top: 20em;
+    }
+}
+@media screen and (max-width:1100px) and (min-width:669px) {
+    .aboutContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: scroll;
+      
+    }
+    .infoContainer {
+        width: 100%;
+    }
+    .cube{
+        width: 100%;
+    }
+   
+}
+

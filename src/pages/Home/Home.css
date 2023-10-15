@@ -1,0 +1,379 @@
+.homeBody {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1d1d1d;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.homeContainer {
+    display: flex;
+    align-items: center;
+    width: 97%;
+    ;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.homeBody .homeContainer .introCard {
+    width: 50%;
+    height: auto;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 5em;
+    /* background-color: red; */
+
+    gap: 0em;
+}
+
+.homeBody .homeContainer .introCard .introText {
+    /* background-color: aliceblue; */
+    height: 20em;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: white;
+    /* font-size: 0%; */
+
+}
+
+.introText div {
+    z-index: 2;
+    font-size: 6em;
+    color: white;
+    background-color: transparent;
+    border: none;
+    width: auto;
+    cursor: auto;
+    /* background-color: red; */
+    /* font-family:'Courier New', Courier, monospace; */
+    /* font-weight: bold; */
+    font-weight: bold;
+    /* width: 50%; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-family:"Open Sans",sans-serif;
+}
+
+.introText div:hover {
+    color: rgb(92, 255, 160);
+    animation: animate 0.6s;
+}
+
+@keyframes animate {
+    25% {
+        transform: scale(0.8, 1.3);
+    }
+
+    50% {
+        transform: scale(1.1, 0.8);
+    }
+
+    75% {
+        transform: scale(.7, 1.2);
+    }
+}
+
+.z {
+    position: absolute;
+    /* background-color: red; */
+}
+
+.a {
+    position: absolute;
+    left: .7em;
+}
+
+
+.b {
+    position: absolute;
+
+    top: 1em;
+    left: 0;
+}
+
+.y {
+    position: absolute;
+    top: 0.3em;
+    left: .2em;
+}
+
+.c {
+    position: absolute;
+    top: 1em;
+    left: .4em;
+
+}
+
+.d {
+    position: absolute;
+    top: 1em;
+    left: 8em;
+    height: 10em;
+}
+
+.e {
+    position: absolute;
+    top: 1em;
+    left: 2.6em;
+
+}
+
+.f {
+    position: absolute;
+    top: 1em;
+    left: 3.2em;
+
+}
+
+.g {
+    position: absolute;
+    top: 1em;
+    left: 3.8em;
+
+}
+
+
+.h {
+    position: absolute;
+    top: 2em;
+    left: 0;
+
+}
+
+.i {
+    position: absolute;
+    top: 2em;
+    left: .8em;
+
+}
+
+.j {
+    position: absolute;
+    top: 2em;
+    left: 1.4em;
+
+}
+
+
+.k {
+    position: absolute;
+    top: 2em;
+    left: 2.3em;
+
+}
+
+.l {
+    position: absolute;
+    top: 2em;
+    left: 2.9em;
+
+}
+
+.m {
+    position: absolute;
+    top: 2em;
+    left: 3.4em;
+
+}
+
+.n {
+    position: absolute;
+    top: 2em;
+    left: 3.9em;
+
+}
+
+.o {
+    position: absolute;
+    top: 2em;
+    left: 4.4em;
+
+}
+
+.p {
+    position: absolute;
+    top: 2em;
+    left: 4.65em;
+
+}
+
+.q {
+    position: absolute;
+    top: 2em;
+    left: 5.25em;
+
+}
+
+.r {
+    position: absolute;
+    top: 2em;
+    left: 5.85em;
+
+}
+
+.s {
+    position: absolute;
+    top: 2em;
+    left: 6.4em;
+
+}
+
+.subInfo {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    color: white;
+    /* background-color: red; */
+    /* margin-bottom: -5em; */
+    /* margin-top: 5em; */
+}
+
+.subInfo1,
+.subInfo2 {
+    background-color: #2d2e2d;
+    font-size: 1.2em;
+    padding: 1em;
+    border-radius: .2em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    letter-spacing: .2em;
+}
+
+.contactBtn {
+    margin-top: 3em;
+    z-index: 2;
+
+    /* background-color: red; */
+}
+
+.contactBtn .btn {
+    /* padding: 1em; */
+    background-color: transparent;
+    border: .1em solid #0bd3b4;
+    color: #0bd3b4;
+    font-size: 1.3em;
+    width: 15em;
+    letter-spacing: .2em;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    text-align: center;
+    height: 3em;
+    line-height: 2.5em; 
+}
+.contactBtn .btn div {
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    position: relative;
+    overflow: hidden;
+}
+.contactBtn .btn div .bg {
+    background-color: #0bd3b4;
+    left: 0;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    transition: .5s ease-in-out ;
+    /* transform: skewX(-10deg); */
+}
+.contactBtn .btn:hover .bg {
+    width: 100%;
+}
+.contactBtn .btn:hover div .text {
+    color:  white;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.coderImg {
+    width: 50%;
+    height: 80%;
+    /* background-color: red;   */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+   
+}
+.coderImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.boy {
+    width: 50%;
+    height: 80%;
+    bottom: 25%;
+    right: 5%;
+}
+@media screen and (min-width:414px) and (max-width:668px) {
+    .introText div {
+        font-size: 3em;
+    }
+    .homeBody .homeContainer {
+        width: 100%;
+    }
+    .homeBody .homeContainer .introCard {
+        margin-left: 3em;
+    }
+    .coderImg {
+        display: none;
+    }
+    .d {
+        height: 5em;
+        left: 4em;
+    }
+    .homeBody .homeContainer .introCard .introText {
+        /* background-color: red; */
+        height: 10em;
+    }
+    .subInfo1,
+    .subInfo2 {
+
+        font-size: 1em;
+        padding: .5em;
+        border-radius: .2em;
+
+        /* letter-spacing: .2em; */
+    }
+}
+@media screen and (max-width:1100px) and (min-width:669px) {
+    .introText div {
+        font-size: 5.5em;
+    }
+
+   
+
+    .subInfo1,
+    .subInfo2 {
+
+        font-size: 1em;
+        padding: .5em;
+        border-radius: .2em;
+
+        /* letter-spacing: .2em; */
+    }
+
+    .homeBody .homeContainer .introCard{
+        margin-left: 3em;
+    }
+   
+}
+

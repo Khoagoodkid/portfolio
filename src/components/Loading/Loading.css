@@ -1,0 +1,19 @@
+.loadingBody {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1d1d1d;
+    /* background-color: red; */
+    transition: transform .5s;
+    /* transform: translateX(100%); */
+    /* border: .1em solid black; */
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    /* padding: 3em; */
+}

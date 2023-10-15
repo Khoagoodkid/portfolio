@@ -1,0 +1,87 @@
+.navBarBody {
+    width: 3%;
+    height: 100%;
+    background-color: #181818
+    ;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-between;
+}
+.navBarBody a {
+    text-decoration: none;
+    color: white;
+}
+.navigators {
+    display: flex;
+    flex-direction: column;
+    gap:1em
+}
+.topMenu{
+    height: 10em;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+}
+.topMenu img {
+    width: 100%;
+    height: 60%;
+}
+.navigator:hover{
+    color: #0bd3b4;
+    
+}
+
+.menuIcon {
+      position: absolute;
+      left: -100%;
+    }
+    .closeIcon{
+       
+    }
+@media screen and (max-width:1100px) {
+    .navBarBody {
+       position: absolute;
+       top: 0;
+       width:50%;
+       display: flex;
+       
+       height: 100%;
+       width: 100%;
+       z-index: 10;
+       left: -100%;
+       transition: .5s ease-in-out;
+       /* overflow: hidden; */
+    }
+    .navBarBody.active {
+        left: 0;
+    }
+    .navigator{
+        width: 100em;
+        height: 10em;
+        /* background-color: red; */
+        font-size: 3em;
+        scale: 200%;
+    }
+    .navigators {
+        gap: 2em;
+        /* position: relative; */
+        /* background-color: red; */
+    }
+    .menuIcon {
+        visibility: visible;
+        position: absolute;
+        top: .5em;
+        right:.5em;
+        color: white;
+        z-index: 5;
+        left:auto;
+    }
+    .closeIcon{
+        visibility: visible;
+        position: absolute;
+        right:.5em;
+        top:.5em
+    }
+    
+}
