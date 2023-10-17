@@ -18,13 +18,14 @@ function FrameworkSlider() {
         'Php', 'MySQL','ReactJS','Scss'
     ];
     useEffect(() => {
+       
         if (isLoaded.current) return
-        setTimeout(() => {
+      
 
             loadTagCloud()
-        }, [3000])
+       
         isLoaded.current = true
-    }, [])
+    }, [window.innerWidth])
     const loadTagCloud = () => {
         let radius = 350
         if(window.innerWidth <= 668) {

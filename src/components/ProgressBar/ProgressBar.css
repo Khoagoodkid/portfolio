@@ -12,7 +12,7 @@
 }
 .barBody:hover {
     transform: scale(120%) 
-   
+    
 }
 .barBody .percent {
     position: relative;
@@ -70,6 +70,7 @@
 }
 .dot::before{
     content: '';
+    
     position: absolute;
     top: -5px;
     left: 50%;
@@ -108,7 +109,8 @@
     font-size: .5em;
 }
 .percent .text p {
-
+    
+    font-family: 'poppin';
     font-weight: 300;
     font-size: .75em;
     letter-spacing: .1em;

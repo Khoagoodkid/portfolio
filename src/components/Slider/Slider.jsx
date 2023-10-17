@@ -135,7 +135,7 @@ function Slider() {
   return (
     <>
       <div className="slides">
-        {!isOpenModal && <button onClick={() => dispatch({ type: "PREV" })} >‹</button>}
+        {!isOpenModal && <button onClick={() => dispatch({ type: "NEXT" })} >‹</button>}
 
 
 
@@ -143,7 +143,7 @@ function Slider() {
           let offset = slides.length + (state.slideIndex - i);
           return <Slide slide={slide} offset={offset} key={i} isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal} />;
         })}
-        {!isOpenModal && <button onClick={() => dispatch({ type: "NEXT" })} >›</button>}
+        {!isOpenModal && <button onClick={() => dispatch({ type: "PREV" })} >›</button>}
 
       </div>
 

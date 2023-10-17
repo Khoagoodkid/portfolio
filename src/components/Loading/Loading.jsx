@@ -13,7 +13,7 @@ function Loading() {
   return (
     <div className='loadingBody' style={{transform:`translateX(${animation})`}}>
         <img src={Khoa}/>
-        <h2>Khoa is thinking ...</h2>
+        <h2 style={{fontFamily:'Gloria Hallelujah, cursive'}}>Khoa is thinking ...</h2>
         <BarLoader height={'4'} width='30%' color='#0bd3b4'
             speedMultiplier='1'
         />

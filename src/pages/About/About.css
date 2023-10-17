@@ -6,21 +6,24 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #1d1d1d;
+    background-color: #111;
     display: flex;
     /* flex-wrap: wrap; */
     /* height: auto; */
 }
 
 .aboutContainer {
-    background-color: #1d1d1d;
+    /* background-color: #1d1d1d; */
+    /* padding-top: 5em; */
+    background-color: #111;
     width: 97%;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     /* flex-wrap: wrap; */
     height: auto;
     
-    justify-content: center;
+    flex-direction: column;
+    /* justify-content: center; */
     position: relative;
     /* justify-content: center; */
     align-items: center;
@@ -29,14 +32,13 @@
     overflow-x: hidden;
 
 }
-::-webkit-scrollbar{
-    display: none;
-}
+
 
 .infoContainer {
     width: 58%;
+    padding-top: 10em;
     /* background-color: blue; */
-    height: 60%;
+    /* height: 60%; */
     display: flex;
 
 }
@@ -50,7 +52,7 @@
 
 .profilePicture img {
     /* object-fit: contain; */
-    width: 64%;
+    width: 20em;
     height: 70%;
     margin-top: 1em;
     position: absolute;
@@ -97,23 +99,41 @@
 
 .infoContainer .infoText {
     /* background-color: red; */
-    width: 48%;
+    width: 60%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     text-align: left;
- 
+    font-size: 1.1rem;
 
+}
+.infoText h1 {
+    font-size: 3.5rem;
+}
+
+.infoText p {
+ 
+   
 }
 
 .infoText button {
     background-color: transparent;
     color: #0bd3b4;
+    /* background-color: #0bd3b4; */
+    /* font-family: 'poppin-bold'; */
+    /* color: black; */
+    /* font-weight: bold; */
     border: .1em solid #0bd3b4;
     font-size: 1.2em;
+    font-family: 'poppin';
  
+}
+.infoText button:hover {
+    border: .1em solid #0bd3b4;
+    background-color: #0bd3b4;
+    color: #111;
 }
 
 .infoText .details {
@@ -145,22 +165,26 @@
     width: 40%;
 }
 
-@media screen and (min-width:414px) and (max-width:668px) {
+@media screen and (max-width:668px) {
+ 
     .infoContainer {
         width: 100%;
         display: flex;
         flex-direction: column;
-        
+        /* padding-top: -100em; */
         /* height: auto; */
         /* background-color: red; */
         align-items: center;
+        padding-top: 30em;
+        margin: 0;
+        justify-content: center;
     }
     .profilePicture {
-        background-color: red;
-        height: 50em;
+        /* background-color: red; */
+
         width: 50%;
         position: relative;
-        margin-top: 5em;
+        /* margin-top: -10em; */
     }
     .profilePicture .layout {
         position: absolute;
@@ -194,14 +218,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 25em;
+      
         overflow-y: scroll;
-        /* flex-direction: column; */
-        /* gap:10em;? */
-        /* background-color: red; */
+       
     }
     .cubeContainer {
-        margin-top: 20em;
+    
     }
 }
 @media screen and (max-width:1100px) and (min-width:669px) {
@@ -211,6 +233,9 @@
         align-items: center;
         overflow-y: scroll;
       
+    }
+    .profilePicture img {
+        width: 18em;
     }
     .infoContainer {
         width: 100%;

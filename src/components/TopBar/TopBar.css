@@ -1,0 +1,78 @@
+.topbar-body {
+    width: 100%;
+    height: 3em;
+    /* padding-bottom: 3em; */
+    background-color: rgba(18, 18, 18,.8);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    /* background-color: red; */
+    z-index: 9;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* padding-left: 8em; */
+    /* padding-right: 10em; */
+}
+.socials {
+    display: flex;
+    flex-direction: row;
+    width: 10em;
+    align-items: center;
+    height: 100%;
+    gap:.5em;
+    margin-left: 4em;
+    /* background-color: blue; */
+    /* justify-self: flex-end; */
+}
+.app {
+    color: gray;
+    width: 100%;
+    cursor: pointer;
+}
+.app:hover {
+    color: #0bd3b4;
+}
+.resume-btn {
+    margin-right: 5em;
+
+}
+.resume-btn button {
+    border-radius: .2em;
+    background-color: transparent;
+    border: .15em solid #0bd3b4;
+    color: #0bd3b4;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'poppin';
+}
+.resume-btn button:hover {
+    border: .15em solid #0bd3b4;
+    background-color: #0bd3b4;
+    color: white;
+    animation-delay: 200s;
+}
+@media screen and (max-width:668px) {
+    .topbar-body {
+        /* display: none; */
+        /* background-color: red; */
+        
+    }
+    .socials {
+        margin-left: 1em;
+    }
+    .resume-btn {
+        margin-right: 1em;
+    
+    }
+    .resume-btn button {
+        border-radius: .2em;
+        background-color: transparent;
+        border: .15em solid #0bd3b4;
+        color: #0bd3b4;
+        font-size: 1em;
+        font-weight: bold;
+        font-family: 'poppin';
+    }
+}

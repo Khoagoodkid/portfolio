@@ -1,0 +1,64 @@
+.expcard-body {
+    margin-top: 1em;
+    padding: 2em;
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+ 
+}
+.expcard-body h2 {
+    font-family: 'poppin-bold';
+}
+.expcard-body span {
+    color: #0bd3b4;
+    font-family: 'poppin-bold';
+    letter-spacing: .05em;
+    font-size: 1.2em;
+}
+.expcard-body p {
+    width: 90%;
+    text-align: left;
+}
+.expcard-body .props {
+    display: flex;
+    flex-wrap: wrap;
+    gap:1em
+}
+.expcard-body .props .prop {
+    font-family: 'poppin';
+    background-color: #232323;
+    padding: .2em;
+    width: auto;
+    padding-left: .7em;
+    padding-right: .7em;
+    border-radius: 3em;
+}
+.expcard-body .row-1, .expcard-body .row-2{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    width: 100%;
+}
+.expcard-body .row-1 a:hover {
+    color:white
+}
+.expcard-body b {
+    top:6em
+}
+@media screen and (max-width:668px)  {
+    .expcard-body {
+        width: 95%;
+        padding: 1em;
+        overflow: scroll;
+    }
+    .expcard-body .row-1, .expcard-body .row-2{
+       /* padding:1em */
+      
+    }
+}

@@ -10,6 +10,8 @@ import { PageContext } from '../../App';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import DashboardIcon from '@mui/icons-material/Dashboard';
+
+
 function NavBar() {
     const [isOpen, setIsOpen] = useState(false)
     const { page, setPage } = useContext(PageContext)
@@ -21,45 +23,54 @@ function NavBar() {
             />
             <div className={isOpen ? 'navBarBody active' : 'navBarBody'}>
                 <div className='topMenu'>
-                    <img src={Khoa} />
-                    <h3>Khoa</h3>
+                    
+                    <span>K</span>
+                    <span style={{color:'#0bd3b4'}}>.</span>
                 </div>
                 <nav className='navigators'>
                     <CloseIcon className='closeIcon' onClick={() => setIsOpen(false)}
                         sx={{ fontSize: '3em', display: isOpen ? 'block' : 'none', cursor: 'pointer' }}
                     />
-                    <Link to='/'>
-                        <HomeIcon className='navigator'
-                            onClick={() => setPage('home')}
-                            style={{ color: page === 'home' ? '#0bd3b4' : 'white' }}
+                    <Link className = {page === 'home' ? 'navigator selected' : 'navigator'}
+                     onClick={() => setPage('home')}
+                    to='/'>
+                        <HomeIcon 
+                           className='nav-icon'
+                          
                         />
 
                     </Link>
-                    <Link to='/about'>
-                        <PersonIcon className='navigator'
-                            onClick={() => setPage('about')}
-                            style={{ color: page === 'about' ? '#0bd3b4' : 'white' }} />
+                    <Link className = {page === 'about' ? 'navigator selected' : 'navigator'}
+                     onClick={() => setPage('about')}
+                    to='/about'>
+                        <PersonIcon
+                             className='nav-icon'
+                           />
                     </Link>
-                    <Link to='/skills'>
-                        <SettingsIcon className='navigator'
-                            onClick={() => setPage('skills')}
-                            style={{ color: page === 'skills' ? '#0bd3b4' : 'white' }} />
+                    <Link className = {page === 'skills' ? 'navigator selected' : 'navigator'} 
+                    onClick={() => setPage('skills')}
+                    to='/skills'>
+                        <SettingsIcon
+                         className='nav-icon'
+                           />
                     </Link>
-                    <Link to='/work'>
-                        <DashboardIcon className='navigator'
-                            onClick={() => setPage('work')}
-                            style={{ color: page === 'work' ? '#0bd3b4' : 'white' }} />
+                    <Link className = {page === 'works' ? 'navigator selected' : 'navigator'}
+                     onClick={() => setPage('work')}
+                    to='/work'>
+                        <DashboardIcon
+                            className='nav-icon'
+                            />
 
                     </Link>
-                    <Link to='/contact' >
-                        <EmailIcon className='navigator'
-                            onClick={() => setPage('contact')}
-                            style={{ color: page === 'contact' ? '#0bd3b4' : 'white' }} />
+                    <Link className = {page === 'contact' ? 'navigator selected' : 'navigator'} 
+                      onClick={() => setPage('contact')}
+                    to='/contact' >
+                        <EmailIcon 
+                            className='nav-icon'
+                           />
                     </Link>
                 </nav>
-                <nav>
-
-                </nav>
+                
             </div>
         </>
     )

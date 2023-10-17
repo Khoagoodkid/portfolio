@@ -5,7 +5,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #1d1d1d;
+    background-color: #111;
     /* background-color: red; */
     display: flex;
     align-items: center;
@@ -14,13 +14,13 @@
 
 .homeContainer {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     width: 97%;
     ;
     height: 100%;
     position: relative;
     overflow: hidden;
-
+    /* background-color: red; */
 }
 
 .homeBody .homeContainer .introCard {
@@ -33,7 +33,7 @@
     justify-content: center;
     margin-left: 5em;
     /* background-color: red; */
-
+    margin-top: 5em;
     gap: 0em;
 }
 
@@ -59,12 +59,12 @@
     width: auto;
     cursor: auto;
     /* background-color: red; */
-    /* font-family:'Courier New', Courier, monospace; */
+    font-family: 'poppin-bold';
     /* font-weight: bold; */
     font-weight: bold;
     /* width: 50%; */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    font-family:"Open Sans",sans-serif;
+    /* font-family:"Open Sans",sans-serif; */
 }
 
 .introText div:hover {
@@ -89,11 +89,12 @@
 .z {
     position: absolute;
     /* background-color: red; */
+    
 }
 
 .a {
     position: absolute;
-    left: .7em;
+    left: .8em;
 }
 
 
@@ -107,41 +108,41 @@
 .y {
     position: absolute;
     top: 0.3em;
-    left: .2em;
+    left: .3em;
 }
 
 .c {
     position: absolute;
     top: 1em;
-    left: .4em;
+    left: .5em;
 
 }
 
 .d {
     position: absolute;
     top: 1em;
-    left: 8em;
+    left: 9em;
     height: 10em;
 }
 
 .e {
     position: absolute;
     top: 1em;
-    left: 2.6em;
+    left: 2.7em;
 
 }
 
 .f {
     position: absolute;
     top: 1em;
-    left: 3.2em;
+    left: 3.4em;
 
 }
 
 .g {
     position: absolute;
     top: 1em;
-    left: 3.8em;
+    left: 4.1em;
 
 }
 
@@ -156,14 +157,14 @@
 .i {
     position: absolute;
     top: 2em;
-    left: .8em;
+    left: .9em;
 
 }
 
 .j {
     position: absolute;
     top: 2em;
-    left: 1.4em;
+    left: 1.6em;
 
 }
 
@@ -171,71 +172,72 @@
 .k {
     position: absolute;
     top: 2em;
-    left: 2.3em;
+    left: 2.5em;
 
 }
 
 .l {
     position: absolute;
     top: 2em;
-    left: 2.9em;
+    left: 3.2em;
 
 }
 
 .m {
     position: absolute;
     top: 2em;
-    left: 3.4em;
+    left: 3.8em;
 
 }
 
 .n {
     position: absolute;
     top: 2em;
-    left: 3.9em;
+    left: 4.4em;
 
 }
 
 .o {
     position: absolute;
     top: 2em;
-    left: 4.4em;
+    left: 5em;
 
 }
 
 .p {
     position: absolute;
     top: 2em;
-    left: 4.65em;
+    left: 5.3em;
 
 }
 
 .q {
     position: absolute;
     top: 2em;
-    left: 5.25em;
+    left: 5.9em;
 
 }
 
 .r {
     position: absolute;
     top: 2em;
-    left: 5.85em;
+    left: 6.6em;
 
 }
 
 .s {
     position: absolute;
     top: 2em;
-    left: 6.4em;
+    left: 7.2em;
 
 }
 
 .subInfo {
     /* background-color: red; */
     display: flex;
-    flex-direction: row;
-    gap: 3em;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    gap: 1em;
     color: white;
     /* background-color: red; */
     /* margin-bottom: -5em; */
@@ -246,7 +248,7 @@
 .subInfo2 {
     background-color: #2d2e2d;
     font-size: 1.2em;
-    padding: 1em;
+    padding:1em;
     border-radius: .2em;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     letter-spacing: .2em;
@@ -280,6 +282,10 @@
     /* background-color: red; */
     position: relative;
     overflow: hidden;
+}
+.contactBtn .btn div .text {
+    
+    font-family: 'poppin';
 }
 .contactBtn .btn div .bg {
     background-color: #0bd3b4;
@@ -323,7 +329,8 @@
     bottom: 25%;
     right: 5%;
 }
-@media screen and (min-width:414px) and (max-width:668px) {
+@media screen and (max-width:668px) {
+ 
     .introText div {
         font-size: 3em;
     }
@@ -331,7 +338,7 @@
         width: 100%;
     }
     .homeBody .homeContainer .introCard {
-        margin-left: 3em;
+        margin-left: 2em;
     }
     .coderImg {
         display: none;
@@ -346,12 +353,16 @@
     }
     .subInfo1,
     .subInfo2 {
-
+        /* width: 10em; */
         font-size: 1em;
         padding: .5em;
         border-radius: .2em;
-
+        
         /* letter-spacing: .2em; */
+    }
+    .subInfo1 {
+        
+        padding-left: 0;
     }
 }
 @media screen and (max-width:1100px) and (min-width:669px) {

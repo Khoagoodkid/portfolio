@@ -18,15 +18,18 @@
     overflow-x: hidden;
     overflow-y: scroll;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     height: auto;
+    /* padding-top: 5em; */
 }
 
 .skillsContainer .display {
-    width: 40%;
+    padding: 2em;
+    padding-top:10em;
+    width: 70%;
     /* background-color: aqua;   */
     height: 100%;
-    padding: 2em;
     padding-left: 5%;
     display: flex;
     justify-content: center;
@@ -53,6 +56,7 @@
 
 
     border-image-slice: 1;
+    font-size: 1.1rem;
 
 }
 
@@ -64,20 +68,54 @@
 }
 
 .cube {
-    width: 50%;
+    width: 55%;
     height: 100%;
     /* background-color: red; */
     padding-top: 3em;
+    
     display: flex;
     flex-wrap: wrap;
     gap: 2.5em;
-    /* justify-content: center;
-    align-items: center; */
-    /* padding: 1em; */
-    /* transform: rotate(90deg); */
+    justify-content: center;
+    align-items: center;
+  
+   
+    
 }
 
+.framework-container {
+    padding-top: 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+}
+.framework-container .title, .exp-container .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* gap: 1em; */
+    width: 80%;
+    justify-content: center;
+    
+    font-size: 2.5rem;
+    /* padding-right: 1em; */
+}
+.framework-container .title h2, .exp-container .title h2 {
+    font-family: 'poppin-bold';
 
+}
+.line {
+    background-color: #ebecf3;
+    width: 50%;
+    height: 1px;
+    opacity: .3;
+    margin-left: .5em;
+}
+.framework-container h1 {
+    font-family: 'poppin-bold';
+}
 
 
 .services {
@@ -90,6 +128,8 @@
     border-image-slice: 1;
     padding-top: 1em;
     width: 100%;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
     /* height: auto; */
 }
 
@@ -112,18 +152,41 @@
     border-image-slice: 1;
 
 }
+.exp-container {
+    width: 100%;
+    height: 10em;
+    /* background-color: red; */
+    padding-top: 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.exp-container .title {
+    flex-direction: row-reverse;
+}
+.exp-container .title .line {
+    margin-left: 0;
+    margin-right: .5em;
+}
+.exp-container .exp-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 @media screen and (max-width:668px) {
     .skillsContainer {
         flex-direction: column;
         align-items: center;
+        padding-left: 1em;
         /* gap: 3em; */
-        padding-top: 10em;
+        /* padding-top: 10em; */
     }
 
     .skillsContainer .display {
         /* background-color: red; */
         width: 100%;
+        margin-top:10em;
         align-items: center;
     }
 
@@ -142,12 +205,30 @@
 
     .cube {
         display: flex;
-        margin-top: 10em;
+       
         align-items: center;
-        justify-content: center;
+        /* justify-content: center; */
         /* background-color: red; */
         gap: 4em;
 
+    }
+    .framework-container  {
+        margin-top:6em;
+        /* background-color: red; */
+        padding: 1em;
+    }
+    .framework-container .title, .exp-container .title{
+        width: 100%;
+        /* padding: 1em; */
+    }
+    .framework-container .title h2, .exp-container .title h2 {
+        font-size: 1em;
+    }
+    .exp-container {
+        /* padding-left: 1em; */
+    }
+    .line {
+        width: 20%;
     }
 
 }
@@ -165,7 +246,14 @@
         /* background-color: red; */
         width: 100%;
     }
-
-    .cube {}
+    .framework-container .title, .exp-container .title{
+        width: 90%;
+    }
+    .framework-container .title h2, .exp-container .title h2 {
+        font-size: 1em;
+    }
+    .line {
+        width: 40%;
+    }
 
 }
