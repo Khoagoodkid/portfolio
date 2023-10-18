@@ -40,7 +40,7 @@ function TopBar() {
                         )
                    })}
          </nav>
-         <a className='resume-btn' href="./files/fakecv.pdf" download>
+         <a className='resume-btn' href="./files/CV.pdf" download>
                    <button>
                         My resume
                    </button>
