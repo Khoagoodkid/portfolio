@@ -12,12 +12,13 @@ app.use(bodyParser.json())
 
 
 app.get('/', (req, res) => {
-    res.json( {
-        'hello' : 'hi:'
+    res.json({
+        'hello': 'hi:'
     })
 })
 const appPass = 'imvbdyooaqjgvjtq'
-const sendEmail = (email) => {
+const sendEmail = (mail) => {
+   
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -28,12 +29,42 @@ const sendEmail = (email) => {
     })
     const mail_config = {
         from: 'haphamanhkhoa@gmail.com', // sender address
-        to: email, // list of receivers
+        to: mail.email, // list of receivers
         subject: "Email Sended Confirmation", // Subject line
         text: "Thanks for sending me mail. I will consider carefully before texting you.", // plain text body
-        html: "<b>Thanks for sending me mail. I will consider carefully before texting you</b>", // html body
+      
+        html:`<div>
+        <h1> Please double check your information</h1>
+        <span>Email: ${mail.email}</span>   
+        <span>Name: ${mail.name}</span>
+        <p> Text: ${mail.text}</p>
+        <b>Thanks for sending me an offer. I would consider carefully before responding.</b>
+        </div>
+        `
+    }
+    const receiver_config = {
+        from: 'haphamanhkhoa@gmail.com', // sender address
+        to: 'khoaha.requests@gmail.com', // list of receivers
+        subject: `Request from ${mail.name}`, // Subject line
+        text: "Thanks for sending me mail. I will consider carefully before texting you.", // plain text body
+        html: `<div>
+        <h2>${mail.email}</h2>   
+        <h2>${mail.name}</h2>
+        <p> Text: ${mail.text}</p>
+        </div>`, // html body
     }
     transporter.sendMail(mail_config, (err, info) => {
+        if (err) {
+            console.log(err)
+            return
+        }
+        console.log("Sent" + info.response)
+        // return res.json( {
+        //     message:`Email sended to ${req.body.email} successfully`,
+
+        // })
+    })
+    transporter.sendMail(receiver_config, (err, info) => {
         if (err) {
             console.log(err)
             return
@@ -51,7 +82,8 @@ const sendEmail = (email) => {
 app.post('/email', (req, res) => {
     console.log(req.body)
     res.json(req.body)
-    sendEmail(req.body.email)
+    sendEmail(req.body)
+    
     // send mail with defined transport object
 
 })

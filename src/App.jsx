@@ -10,7 +10,7 @@ import AnimatedRoutes from './components/AnimatedRoutes'
 
 export const PageContext = createContext()
 function App() {
-  const [page, setPage] = useState(null)
+  const [page, setPage] = useState('home')
 
   return (
     

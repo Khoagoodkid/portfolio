@@ -135,7 +135,10 @@ function Slider() {
   return (
     <>
       <div className="slides">
-        {!isOpenModal && <button onClick={() => dispatch({ type: "NEXT" })} >‹</button>}
+        {!isOpenModal && <button onClick={() => dispatch({ type: "NEXT" })} 
+       
+        >‹</button>}
+        
 
 
 

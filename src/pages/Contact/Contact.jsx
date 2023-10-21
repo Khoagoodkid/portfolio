@@ -31,7 +31,9 @@ function Contact() {
             toast.error("Please fill the form before submitting")
             return;
         }
-        axios.post('https://portfolio-backend-qxfn.onrender.com/email', user)
+        const api = 'https://portfolio-backend-qxfn.onrender.com/email'
+        // const api = 'http://localhost:3000/email'
+        axios.post(api, user)
         setUser({
             email: '',
             name: '',
