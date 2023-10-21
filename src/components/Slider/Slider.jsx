@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { slides } from '../../works';
 import SlideModal from '../SlideModal/SlideModal';
 import "./Slider.scss"
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 function useTilt(active) {
   const ref = React.useRef(null);
 
@@ -67,9 +69,11 @@ const slidesReducer = (state, event) => {
 function Slide({ slide, offset, isOpenModal, setIsOpenModal }) {
 
   const active = offset === 0 ? true : null;
+ 
   const ref = useTilt(active);
   const [isHover, setIsHover] = useState(false)
   const [curSlide, setCurSlide] = useState(null)
+  // console.log(slide.title)
   return (
     <>
       <div className='slide'>
@@ -80,15 +84,15 @@ function Slide({ slide, offset, isOpenModal, setIsOpenModal }) {
           style={{
             "--offset": offset,
             "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1,
-            hover:"pointer"
+            hover: "pointer"
           }}
           onMouseOver={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
           onClick={() => {
-            // isOpenModal1 = true
+            if(offset != 0) return
             setIsOpenModal(true)
             // console.log(slide)
-            setCurSlide(slide)
+           setCurSlide(slide)
           }}
         >
           <div
@@ -120,8 +124,8 @@ function Slide({ slide, offset, isOpenModal, setIsOpenModal }) {
           </div>
         </div>
 
-        {isOpenModal && curSlide && <SlideModal isOpenModal={isOpenModal} slide={curSlide} setIsOpenModal={setIsOpenModal} 
-          setCurSlide = {setCurSlide}
+        {isOpenModal && curSlide && <SlideModal isOpenModal={isOpenModal} slide={curSlide} setIsOpenModal={setIsOpenModal}
+          setCurSlide={setCurSlide}
         />}
       </div>
 
@@ -135,10 +139,14 @@ function Slider() {
   return (
     <>
       <div className="slides">
-        {!isOpenModal && <button onClick={() => dispatch({ type: "NEXT" })} 
+        {/* {!isOpenModal && <button onClick={() => dispatch({ type: "NEXT" })} 
        
-        >‹</button>}
-        
+        >‹</button>} */}
+        {!isOpenModal && <button onClick={() => dispatch({ type: "NEXT" })}
+
+        ><ArrowBackIosIcon className='arrow'>
+
+          </ArrowBackIosIcon></button>}
 
 
 
@@ -146,8 +154,10 @@ function Slider() {
           let offset = slides.length + (state.slideIndex - i);
           return <Slide slide={slide} offset={offset} key={i} isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal} />;
         })}
-        {!isOpenModal && <button onClick={() => dispatch({ type: "PREV" })} >›</button>}
-
+        {/* {!isOpenModal && <button onClick={() => dispatch({ type: "PREV" })} >›</button>} */}
+        {!isOpenModal && <button onClick={() => dispatch({ type: "PREV" })} >
+          <ArrowForwardIosIcon className='arrow'/>
+          </button>}
       </div>
 
 
