@@ -54,7 +54,7 @@ function NavBar() {
                          className='nav-icon'
                            />
                     </Link>
-                    <Link className = {page === 'works' ? 'navigator selected' : 'navigator'}
+                    <Link className = {page === 'work' ? 'navigator selected' : 'navigator'}
                      onClick={() => setPage('work')}
                     to='/work'>
                         <DashboardIcon
