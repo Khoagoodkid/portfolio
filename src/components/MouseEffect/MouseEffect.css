@@ -63,5 +63,5 @@
 
 .mouseEffectContainer span:hover::before {
     transition: 0s;
-    transform: scale(1);
+    transform: scale(0.4);
 }

@@ -1,6 +1,8 @@
 export const slides = [
     {
         title:'Todo List',
+        subtitle:'Founder: Khoa Ha',
+        frameworks :["React", "MongoDB", "NodeJS", "Javascript", "Laravel", "PHP", "SQL"],
         description:'A service helps you with memorizing works to be accomplished ',
         images: [
             'workImg/todolist/todolist1.png'
@@ -9,6 +11,8 @@ export const slides = [
     },
     {
         title:'Kaya-AI',
+        subtitle: 'Founder: Kayapay.ai',
+        frameworks :["NextJS", "Postgresql", "Python", "FastAPI", "MUI"],
         description:`Kaya is a cutting-edge AI company specializing in the construction industry. With a focus on innovation, Kaya offers a suite of modules tailored to enhance efficiency in construction projects. The data warehousing component facilitates seamless data management, while a powerful web scraper efficiently gathers information on construction materials and house components from online sources. Kaya's
          Connect platform acts as a unified hub, consolidating communication channels such as Slack and WhatsApp. 
          Additionally, their Commerce platform leverages AI capabilities to assist users in identifying
@@ -25,6 +29,8 @@ export const slides = [
     },
     {
         title:'Chat Web',
+        subtitle:'Founder: Khoa Ha',
+        frameworks :["React", "Firebase", "NodeJS", "Javascript", "MUI"],
         description:'A service connects people around the world with a reliable message security. Moreover, there are myriad features including creating conversation, changing background, get online users, video call... ',
         images: [
             'workImg/chatweb/chatweb1.jpg',
@@ -37,6 +43,8 @@ export const slides = [
     },
     {
         title:'Food Review',
+        subtitle:'Founder: Khoa Ha',
+        frameworks :["React", "MongoDB", "NodeJS", "Javascript", "MUI"],
         description:'A service introduces details about various unique Vietnamese foods. ',
         images: [
             'workImg/foodreview/foodreview1.jpg',

@@ -31,7 +31,7 @@ const skills = [
   },
   {
     name: "Python",
-    percent: 30,
+    percent: 60,
     color: "#5656f5",
     boxShadow: "rgba(86, 86, 245,0.5)",
   },
@@ -46,6 +46,12 @@ const skills = [
     percent: 95,
     color: "#781aa1",
     boxShadow: "rgba(120, 26, 161,0.5)",
+  },
+  {
+    name: "C#",
+    percent: 60,
+    color: "#f218bc",
+    boxShadow: "rgba(242, 24, 188,0.5)",
   },
 ];
 const services = [

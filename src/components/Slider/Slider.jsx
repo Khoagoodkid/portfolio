@@ -69,7 +69,7 @@ const slidesReducer = (state, event) => {
 function Slide({ slide, offset, isOpenModal, setIsOpenModal }) {
 
   const active = offset === 0 ? true : null;
- 
+
   const ref = useTilt(active);
   const [isHover, setIsHover] = useState(false)
   const [curSlide, setCurSlide] = useState(null)
@@ -88,12 +88,7 @@ function Slide({ slide, offset, isOpenModal, setIsOpenModal }) {
           }}
           onMouseOver={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
-          onClick={() => {
-            if(offset != 0) return
-            setIsOpenModal(true)
-            // console.log(slide)
-           setCurSlide(slide)
-          }}
+
         >
           <div
             className="slideBackground"
@@ -109,6 +104,7 @@ function Slide({ slide, offset, isOpenModal, setIsOpenModal }) {
           >
             <div className="slideContentInner">
               <h2 className="slideTitle">{slide.title}</h2>
+
               {/* {isHover && <button
                 onClick={() => {
                   // isOpenModal1 = true
@@ -118,8 +114,25 @@ function Slide({ slide, offset, isOpenModal, setIsOpenModal }) {
                 }
                 }
               >View more</button>} */}
-              {/* <h3 className="slideSubtitle">{slide.subtitle}</h3>
-            <p className="slideDescription">{slide.description}</p> */}
+              {isHover && <>
+                <h3 className="slideSubtitle">{slide.subtitle}</h3>
+                <div className='slideFrameworks'>
+                  {slide.frameworks.map((fw) => {
+                    return (
+                      <div className='fw-card'>
+                        {fw}
+                      </div>
+                    )
+                  })}
+                </div>
+                <p className="slideDescription">{slide.description.slice(0, 150)}...</p>
+                <button onClick={() => {
+                  if (offset != 0) return
+                  setIsOpenModal(true)
+                  // console.log(slide)
+                  setCurSlide(slide)
+                }}>View More</button>
+              </>}
             </div>
           </div>
         </div>
@@ -156,8 +169,8 @@ function Slider() {
         })}
         {/* {!isOpenModal && <button onClick={() => dispatch({ type: "PREV" })} >›</button>} */}
         {!isOpenModal && <button onClick={() => dispatch({ type: "PREV" })} >
-          <ArrowForwardIosIcon className='arrow'/>
-          </button>}
+          <ArrowForwardIosIcon className='arrow' />
+        </button>}
       </div>
 
 
