@@ -23,12 +23,12 @@
     /* font-family:'Courier New', Courier, monospace; */
 }
 
-@media screen and (min-width:414px) and (max-width:668px) {
+@media screen and (max-width:668px) {
     .sliderBody {
         /* display: none; */
         margin-bottom: -90em;
         margin-left: -15em;
-        width: 45em;
+        width: 40em;
         /* height: 15em; */
         /* background-color: red; */
         padding-top: 10em;
