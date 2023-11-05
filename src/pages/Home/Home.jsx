@@ -3,12 +3,10 @@ import "./Home.css"
 import NavBar from '../../components/NavBar/NavBar'
 import { motion } from 'framer-motion'
 import Loading from '../../components/Loading/Loading'
-import coderGif from '../../assets/coder.gif'
-import robotGif from '../../assets/robot.gif'
+import iconsDark from '../../assets/mainIconsdark.svg'
 import Khoa from '../../assets/Khoa.png'
 import MouseEffect from '../../components/MouseEffect/MouseEffect'
-import vector from '../../assets/vecto.png'
-import boy from '../../assets/boy.png'
+
 import { Link } from 'react-router-dom'
 import { PageContext } from '../../App'
 import TopBar from '../../components/TopBar/TopBar'
@@ -93,7 +91,7 @@ function Home() {
                         </div>
                     </div>
                     <div className='coderImg'>
-                        <img src={Khoa} />
+                        <img src={iconsDark} />
                     </div>
 
                 </>}
