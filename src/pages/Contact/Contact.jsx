@@ -82,7 +82,7 @@ function Contact() {
                                 )
                             })}
                         </div>
-                        <div style={{ padding: '1em' }}>
+                        <div style={{ padding: '1em', textAlign:'center' }}>
                             <Reveal>
 
                                 <span>If you find me impressive</span><br />

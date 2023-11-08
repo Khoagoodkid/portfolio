@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { slides } from '../../works';
-import SlideModal from '../SlideModal/SlideModal';
+
 import "./Slider.scss"
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { useNavigate } from 'react-router-dom';
 function useTilt(active) {
   const ref = React.useRef(null);
 
@@ -73,6 +74,8 @@ function Slide({ slide, offset, isOpenModal, setIsOpenModal }) {
   const ref = useTilt(active);
   const [isHover, setIsHover] = useState(false)
   const [curSlide, setCurSlide] = useState(null)
+  const navigate = useNavigate()
+  const wordLimit = window.innerWidth <= 390 ? 50 : 150;
   // console.log(slide.title)
   return (
     <>
@@ -125,10 +128,14 @@ function Slide({ slide, offset, isOpenModal, setIsOpenModal }) {
                     )
                   })}
                 </div>
-                <p className="slideDescription">{slide.description.slice(0, 150)}...</p>
+                <p className="slideDescription">{slide.description.slice(0, wordLimit)}...</p>
                 <button onClick={() => {
                   if (offset != 0) return
-                  setIsOpenModal(true)
+                  navigate(`/work/project/${slide.path}`, {
+                    state: {
+                      path: slide.path
+                    }
+                  })
                   // console.log(slide)
                   setCurSlide(slide)
                 }}>View More</button>

@@ -72,6 +72,7 @@ function About() {
 
                                     <h1 style={{ color: '#0bd3b4', fontFamily: 'Gloria Hallelujah, cursive', fontWeight: 'bold' }}>Me, Myself & I</h1>
                                 </Reveal>
+                            
                                 <Reveal>
 
                                     <p>I'm mainly a Vietnamese web developer living in Winnipeg, Canada.

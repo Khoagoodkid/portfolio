@@ -30,7 +30,7 @@ function FrameworkSlider() {
         let radius = 350
         if(window.innerWidth <= 668) {
             radius = 150;
-            console.log(window.screen.width)
+           
         }
         TagCloud('.slider', texts, {
             radius: radius,

@@ -75,6 +75,7 @@ function Home() {
                             </div>
                         </div>
                         <div className='contactBtn'>
+                          
                             <Link to='/contact'>
                                 <Reveal>
                                     <a className='btn' onClick={() => setPage('contact')}>
