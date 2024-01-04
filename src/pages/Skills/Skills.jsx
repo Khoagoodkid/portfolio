@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./Skills.css";
 import NavBar from "../../components/NavBar/NavBar";
 import Loading from "../../components/Loading/Loading";
@@ -70,14 +70,23 @@ const services = [
 ];
 const exp = [
   {
+    company: 'Myria',
+    role: 'Software Engineer',
+    description: 'I work as a front-end developer. Building web UI',
+    props: ['Nextjs', 'Typescript', 'Git', 'Github'],
+    start_at: '12/2023',
+    end_at: '1/2024',
+    location: 'Winnipeg, Canada'
+  },
+  {
     company: 'Kayapay.ai',
     role: 'Software Engineer',
     description: 'I work as a full-stack developer. Constructing web UI and processing data through frontend and backend. Training and building basic AI Model.',
     props: ['React', 'Typescript', 'Python', 'Postgresql', 'Fast API', 'Git', 'Github', 'AI'],
-    start_at: '2023',
-    end_at: 'Present',
+    start_at: '9/2023',
+    end_at: '11/2023',
     location: 'Winnipeg, Canada'
-  }
+  },
 ]
 function Skills() {
   const [isShown, setIsShown] = useState(false);
@@ -164,7 +173,7 @@ function Skills() {
               <div className="title">
 
                 <Reveal>
-                  <h2>Languages </h2>
+                  <h2>Progress </h2>
                 </Reveal>
 
                 <h2 style={{ color: "#0bd3b4" }}>.</h2>
@@ -176,7 +185,7 @@ function Skills() {
                   return (
                     // <div style={{ width: '100%', height: '8em' }} key={index}>
 
-                    <ProgressBar skill={s} />
+                    <ProgressBar skill={s}  key = {index}/>
                     // </div>
                   );
                 })}
@@ -196,11 +205,11 @@ function Skills() {
               </div>
 
               <div className="exp-cards">
-                {exp.map((e) => {
+                {exp.map((e, index) => {
                   return (
-
-
+                    <>
                     <ExpCard
+                      key = {index}
                       company={e.company}
                       role={e.role}
                       start_at={e.start_at}
@@ -209,6 +218,9 @@ function Skills() {
                       description={e.description}
                       location={e.location}
                     />
+                    
+                    </>
+
 
                   )
                 })}

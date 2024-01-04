@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react'
+import  { useContext, useEffect, useState } from 'react'
 import "./Home.css"
 import NavBar from '../../components/NavBar/NavBar'
-import { motion } from 'framer-motion'
+
 import Loading from '../../components/Loading/Loading'
 import iconsDark from '../../assets/mainIconsdark.svg'
 import Khoa from '../../assets/Khoa.png'

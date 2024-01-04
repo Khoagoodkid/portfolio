@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import  { useState, useEffect } from 'react'
 import "./Contact.css"
 import NavBar from '../../components/NavBar/NavBar'
-import { motion } from 'framer-motion'
+
 import Loading from '../../components/Loading/Loading'
 import topImg from '../../assets/topImg.avif'
 import { profile } from '../About/About'
@@ -72,7 +72,7 @@ function Contact() {
                             {profile.slice(1, profile.length).map((info, index) => {
                                 return (
 
-                                    <Reveal>
+                                    <Reveal key ={index}>
                                         <div className='infoCard' key={index}>
                                             <div style={{ color: '#0bd3b4' }}>{info.img}</div>
                                             <span style={{ fontSize: '1.5em', fontWeight: 'bold', color: '#0bd3b4', fontFamily: 'poppin' }}>{info.name[0].toUpperCase() + info.name.slice(1)}</span>
@@ -131,7 +131,7 @@ function Contact() {
 
                         {socials.map((app, i) => {
                             return (
-                                <Reveal>
+                                <Reveal key ={i}>
                                     <a className='app'
                                         onClick={() => window.open(app.link)}
                                         key={i}>

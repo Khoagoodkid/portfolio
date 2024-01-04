@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react'
+import  { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import "./NavBar.css"
-import Khoa from '../../assets/Khoa.png'
+
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -38,7 +38,7 @@ function NavBar() {
                            className='nav-icon'
                           
                         />
-
+                        {/* <span>Home</span> */}
                     </Link>
                     <Link className = {page === 'about' ? 'navigator selected' : 'navigator'}
                      onClick={() => setPage('about')}

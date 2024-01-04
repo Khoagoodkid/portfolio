@@ -58,6 +58,7 @@
         align-items: center;
     }
     .navigator.selected {
+     
         color:#0bd3b4;
         border-right: .2em solid #0bd3b4;
         background-color: rgba(64, 63, 63,.7);
