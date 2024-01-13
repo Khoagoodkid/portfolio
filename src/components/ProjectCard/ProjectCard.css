@@ -1,0 +1,32 @@
+.project-card {
+    overflow: hidden;
+    position: relative;
+    padding: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    min-height: 200px;
+    background-color: #232323;
+}
+
+.project-card .thumbnail {
+    position: absolute;
+    bottom: 0rem;
+    right: 3%;
+    width: 86%;
+    height: 90%;
+    left: 3%;
+    top: 2.5rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+}
+.project-line {
+    background-color: #ebecf3;
+    width: 60%;
+    height: 1px;
+    opacity: .3;
+ 
+}
+@media screen and (max-width:1100px) {
+    
+}
+

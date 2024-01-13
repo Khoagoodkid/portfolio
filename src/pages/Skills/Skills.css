@@ -90,6 +90,10 @@
     flex-direction: column;
     align-items: center;
     /* background-color: red; */
+    /* background-image: url("/progress_bg.png");
+    background-repeat: no-repeat ;
+    background-size: auto;
+    background-position: top; */
 }
 .framework-container .title, .exp-container .title {
     display: flex;

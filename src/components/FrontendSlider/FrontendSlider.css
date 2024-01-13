@@ -1,0 +1,27 @@
+
+.slider-body {
+    width: 65%;
+    margin-top: 4em;
+    height:auto
+}
+.slider-body .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* gap: 1em; */
+    width: 100%;
+    justify-content: center;
+    
+    font-size: 2.5rem;
+    font-family: 'poppin-bold';
+}
+.slider-body .title h2 {
+    font-family: 'poppin-bold';
+}
+@media screen and (max-width:1100px) {
+    .slider-body {
+        margin-top: 0;
+        width: 90%;
+        height: auto
+    }
+}

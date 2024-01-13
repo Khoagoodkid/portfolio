@@ -9,6 +9,10 @@ import { slides } from '../../works'
 // import "slick-carousel/slick/slick-theme.css";
 // import Coverflow from 'react-coverflow';
 import Slider from '../../components/Slider/Slider'
+import Reveal from '../../components/Reveal/Reveal'
+import { ProjectCard } from '../../components/ProjectCard/ProjectCard'
+import { FrontendSlider } from '../../components/FrontendSlider/FrontendSlider'
+import TopBar from '../../components/TopBar/TopBar'
 function Work() {
     const settings = {
         dots: true,
@@ -31,7 +35,42 @@ function Work() {
             <NavBar />
             <div className="workContainer">
                 {/* <div className='workWrapper'> */}
-                {isShown && <Slider />}
+                {isShown && <>
+                    <TopBar />
+                    <div className='hero-banner'>
+                        <div>
+                            <h1 style={{fontFamily:'poppin-bold',textAlign:'left'}}>Welcome to my projects !</h1>
+                        
+                        </div>
+
+                        <FrontendSlider />
+                    </div>
+
+
+
+                    <div className='projects'>
+
+                        <div className="title">
+                            <Reveal>
+                                <h2>Projects </h2>
+
+                            </Reveal>
+                            <h2 style={{ color: "#0bd3b4" }}>.</h2>
+                            <div className="line"></div>
+
+                        </div>
+                        <div className='project-display'>
+
+                            {slides.map((project) => {
+                                return (
+                                    <ProjectCard project={project} />
+
+                                )
+                            })}
+                        </div>
+                    </div>
+
+                </>}
 
                 <Loading />
             </div>

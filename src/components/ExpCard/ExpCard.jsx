@@ -44,7 +44,7 @@ function ExpCard({ company, role, description, start_at, end_at, location, props
           })}
         </div>
       </div>
-      <div style={{ width: '80%', height:'.1em', backgroundColor:'#ebecf3',opacity:'.3'}} />
+      <div style={{ width: '85%', height:'.1em', backgroundColor:'#ebecf3',opacity:'.3'}} />
     </>
 
 
