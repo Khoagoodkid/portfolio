@@ -191,12 +191,12 @@
         top: 50%;
     }
     .workBody .workContainer .hero-banner .title .design {
-        top: 80%;
-        left: 10%;
-        flex-direction: row;
+        top: 10%;
+        left: 80%;
+        /* flex-direction: row; */
         gap:1em;
-        width: 80%;
-        align-items: center;
+        width: 20%;
+        align-items: start;
     }
     
     .workBody .workContainer .hero-banner .title .design img {
@@ -204,9 +204,9 @@
     }
     
     .workBody .workContainer .hero-banner .title .fullstack {
-       top: 95%;
-       left: 10%;
-       width: 80%;
+       top: 65%;
+       left: 5%;
+       width: 45%;
     }
     
     .workBody .workContainer .hero-banner .title .fullstack img {
