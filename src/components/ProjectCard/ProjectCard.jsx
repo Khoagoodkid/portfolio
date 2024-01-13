@@ -20,14 +20,14 @@ export const ProjectCard = ({ project }) => {
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'start' }}>
                 <h2 style={{ fontFamily: 'poppin-bold', display: 'flex', flexDirection: 'column', alignItems: 'start', gap: '.2em',  width:'100%' }}>
                     <div style={{display:'flex', alignItems:'center', width:'100%', justifyContent:'space-between',gap:'.2em'}}>
-                     
+                        <h3 style={{ fontFamily: 'poppin-bold', textAlign:'left'}}>{title}</h3>
                         <div className="project-line" />
                         <div style={{ fontFamily: 'poppin-bold', display: 'flex', alignItems: 'start', gap: '.2em' }}>
                             <GitHubIcon/>
                             <LanguageIcon/>
                         </div>
                     </div>
-                    <span style={{ fontSize: '.7em' }}> {subtitle} </span>
+                    <span style={{ fontSize: '.7em', fontFamily:'poppin' }}> {subtitle} </span>
                 </h2>
 
                 <div style={{ display: 'flex', flexWrap: 'wrap', width: '90%', }}>

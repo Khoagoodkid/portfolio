@@ -38,12 +38,23 @@ function Work() {
                 {isShown && <>
                     <TopBar />
                     <div className='hero-banner'>
-                        <div>
-                            <h1 style={{fontFamily:'poppin-bold',textAlign:'left'}}>Welcome to my projects !</h1>
-                        
+                        <div className='title'>
+                            <div className='design'>
+                                <img src="/web-design.png"/>
+                                <span style={{width:'100%', fontFamily:'poppin'}}>UI/UX works, including login, landing page...</span>
+                            </div>
+                            <div className='discover'>
+                                <h2 className='disc'>Disc</h2>
+                                <img src="/discover.png" />
+                                <h2 className='ver'>ver</h2>
+                            </div>
+                            <div className='fullstack'>
+                                <img src="/fullstack.png"/>
+                                <span style={{width:'100%', fontFamily:'poppin'}}>Full-stack works, operating frontend and backend system</span>
+                            </div>
                         </div>
 
-                        <FrontendSlider />
+                        {/* <FrontendSlider /> */}
                     </div>
 
 
