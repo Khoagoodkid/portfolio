@@ -40,22 +40,28 @@ function Work() {
                     <div className='hero-banner'>
                         <div className='title'>
                             <div className='design'>
-                                <img src="/web-design.png"/>
-                                <span style={{width:'100%', fontFamily:'poppin'}}>UI/UX works, including login, landing page...</span>
+                                <img src="/web-design.png" />
+                                <Reveal>
+                                    <span style={{ width: '100%', fontFamily: 'poppin' }}>UI/UX works, including login, landing page...</span>
+
+                                </Reveal>
                             </div>
                             <div className='discover'>
+
                                 <h2 className='disc'>Disc</h2>
                                 <img src="/discover.png" />
                                 <h2 className='ver'>ver</h2>
                             </div>
                             <div className='fullstack'>
-                                <img src="/fullstack.png"/>
-                                <span style={{width:'100%', fontFamily:'poppin'}}>Full-stack works, operating frontend and backend system</span>
+                                <img src="/fullstack.png" />
+                                <Reveal>
+                                    <span style={{ width: '100%', fontFamily: 'poppin' }}>Full-stack works, operating frontend and backend system</span>
+                                </Reveal>
                             </div>
                         </div>
 
-                        {/* <FrontendSlider /> */}
                     </div>
+                    <FrontendSlider />
 
 
 
