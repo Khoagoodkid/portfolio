@@ -4,10 +4,7 @@ import NavBar from '../../components/NavBar/NavBar'
 import "./Work.css"
 import productHeader from '../../assets/productHeader.avif'
 import { slides } from '../../works'
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// import Coverflow from 'react-coverflow';
+import { motion } from "framer-motion"
 import Slider from '../../components/Slider/Slider'
 import Reveal from '../../components/Reveal/Reveal'
 import { ProjectCard } from '../../components/ProjectCard/ProjectCard'
@@ -48,9 +45,24 @@ function Work() {
                             </div>
                             <div className='discover'>
 
-                                <h2 className='disc'>Disc</h2>
-                                <img src="/discover.png" />
-                                <h2 className='ver'>ver</h2>
+                                <motion.h2
+                                    initial={{ opacity: 0, x: -100 }}
+
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    transition={{ duration: 1 }}
+                                    className='disc'>Disc</motion.h2>
+                                <motion.img
+                                    initial={{ opacity: 0, scale:0.5 }}
+
+                                    whileInView={{ scale: 1, opacity: 1 }}
+                                    transition={{ duration: .5 }}
+                                    src="/discover.png" />
+                                <motion.h2
+                                    initial={{ opacity: 0, x: 100 }}
+
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    transition={{ duration: 1 }}
+                                    className='ver'>ver</motion.h2>
                             </div>
                             <div className='fullstack'>
                                 <img src="/fullstack.png" />

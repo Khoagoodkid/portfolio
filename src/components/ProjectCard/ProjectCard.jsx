@@ -5,12 +5,19 @@ import "./ProjectCard.css"
 import { useNavigate } from "react-router-dom";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';
+import { duration } from "@mui/material";
 export const ProjectCard = ({ project }) => {
     const navigate = useNavigate()
     const wordLimit = window.innerWidth <= 390 ? 50 : 150;
     const { title, path, subtitle, frameworks, description, bg } = project
     return (
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <motion.div
+            style={{ display: 'flex', flexDirection: 'column' }}
+            initial={{ opacity:0,y: 100 }}
+
+            whileInView={{ y:0, opacity:1}}
+            transition={{duration:.5}}
+        >
             <div
 
                 className={`project-card`}
@@ -18,16 +25,16 @@ export const ProjectCard = ({ project }) => {
                 <motion.img className='thumbnail' src={bg} whileHover={{ scale: 1.05, rotate: "1deg" }} />
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'start' }}>
-                <h2 style={{ fontFamily: 'poppin-bold', display: 'flex', flexDirection: 'column', alignItems: 'start', gap: '.2em',  width:'100%' }}>
-                    <div style={{display:'flex', alignItems:'center', width:'100%', justifyContent:'space-between',gap:'.2em'}}>
-                        <h3 style={{ fontFamily: 'poppin-bold', textAlign:'left'}}>{title}</h3>
+                <h2 style={{ fontFamily: 'poppin-bold', display: 'flex', flexDirection: 'column', alignItems: 'start', gap: '.2em', width: '100%' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', width: '100%', justifyContent: 'space-between', gap: '.2em' }}>
+                        <h3 style={{ fontFamily: 'poppin-bold', textAlign: 'left' }}>{title}</h3>
                         <div className="project-line" />
                         <div style={{ fontFamily: 'poppin-bold', display: 'flex', alignItems: 'start', gap: '.2em' }}>
-                            <GitHubIcon/>
-                            <LanguageIcon/>
+                            <GitHubIcon />
+                            <LanguageIcon />
                         </div>
                     </div>
-                    <span style={{ fontSize: '.7em', fontFamily:'poppin' }}> {subtitle} </span>
+                    <span style={{ fontSize: '.7em', fontFamily: 'poppin' }}> {subtitle} </span>
                 </h2>
 
                 <div style={{ display: 'flex', flexWrap: 'wrap', width: '90%', }}>
@@ -49,6 +56,6 @@ export const ProjectCard = ({ project }) => {
                             })
                         }}>  Explore more &gt;</span></p>
             </div>
-        </div>
+        </motion.div>
     );
 };
