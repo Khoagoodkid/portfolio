@@ -68,11 +68,13 @@ const SkillItem = ({name,x,y}) => {
   return (
     <motion.div 
     className="skill-item"
-    whileHover={{scale:1.05}}
+    // whileHover={{background:'#0bd3b4', color:'#111'}}
     initial={{x:0,y:0}}
-    whileInView={{x:x,y:y}}
+    whileInView={{x:x,y:y, transition:{duration:1.5,delay:.5}}}
     viewport={{ once: true }}
-    transition={{duration:1.5}}
+    exit
+    // transition={{duration:1.5,delay:.5}}
+    exitHover ={{x:0,y:0, background:'#111'}}
     >
       <span>{name}</span>
     </motion.div>
