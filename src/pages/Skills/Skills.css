@@ -109,6 +109,11 @@
     border-radius: 9999px;
     position: absolute;
 }
+.skill-item:hover {
+    background-color: #0bd3b4;
+    color: #111;
+    cursor: default;
+}
 .skill-item span {
     font-family: 'poppin';
 }
