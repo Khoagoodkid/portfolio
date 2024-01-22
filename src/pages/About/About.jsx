@@ -89,8 +89,8 @@ function About() {
                                 <div className='details'>
                                     {profile.map((p, i) => {
                                         return (
-                                            <Reveal>
-                                                <div key={i} className='detailCard'>
+                                            <Reveal key={i}>
+                                                <div  className='detailCard'>
 
                                                     <div>{p.img}</div>
                                                     <span>{p.text}</span>
