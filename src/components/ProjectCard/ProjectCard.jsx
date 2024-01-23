@@ -2,21 +2,21 @@
 import { motion } from "framer-motion";
 import "./ProjectCard.css"
 // eslint-disable-next-line react/prop-types
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';
 import { duration } from "@mui/material";
 export const ProjectCard = ({ project }) => {
     const navigate = useNavigate()
     const wordLimit = window.innerWidth <= 390 ? 50 : 150;
-    const { title, path, subtitle, frameworks, description, bg } = project
+    const { title, path, subtitle, frameworks, description, bg, github, demo } = project
     return (
         <motion.div
             style={{ display: 'flex', flexDirection: 'column' }}
-            initial={{ opacity:0,y: 100 }}
+            initial={{ opacity: 0, y: 100 }}
 
-            whileInView={{ y:0, opacity:1}}
-            transition={{duration:.5}}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: .5 }}
         >
             <div
 
@@ -30,8 +30,8 @@ export const ProjectCard = ({ project }) => {
                         <h3 style={{ fontFamily: 'poppin-bold', textAlign: 'left' }}>{title}</h3>
                         <div className="project-line" />
                         <div style={{ fontFamily: 'poppin-bold', display: 'flex', alignItems: 'start', gap: '.2em' }}>
-                            <GitHubIcon />
-                            <LanguageIcon />
+                            <GitHubIcon className="github-icon" onClick={() => github && window.open(github)} />
+                            <LanguageIcon className="demo-icon" onClick={() => demo && window.open(demo)} />
                         </div>
                     </div>
                     <span style={{ fontSize: '.7em', fontFamily: 'poppin' }}> {subtitle} </span>
