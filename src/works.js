@@ -38,31 +38,84 @@ export const slides = [
             
 
         ],
+        github: '',
+        demo: 'https://usekaya.ai/',
         bg: 'https://www.state.gov/wp-content/uploads/2021/06/AI-Motherboard-scaled.jpg'
     },
     {
-        title: 'Todo List',
-        path: 'todo_list',
-        subtitle: 'Founder: Khoa Ha',
-        frameworks: ["React", "MongoDB", "NodeJS", "Javascript", "Laravel", "PHP", "SQL"],
-        description: 'A service designed to assist you in remembering tasks to be completed. This tool effectively organizes and reminds you of your pending responsibilities, ensuring that you stay on track and complete your work efficiently.',
+        title: 'Myria',
+        path: 'myria',
+        subtitle: 'Founder: Myria',
+        frameworks: ["NextJS", "Typescript", "Figma", "Tailwindcss"],
+        description: 'Myria is a blockchain gaming ecosystem powered by Myria’s Ethereum L2 scaling solution',
         images: [
-
             {
                 id: 1,
-                callout: "Listing",
-                title: "It's really helpful !",
+                callout: "Welcome",
+                title: "Explore and develop",
                 description:
-                    "Users have the ability to create their own accounts and effectively manage a daily To-Do List. By organizing tasks in a relevant and prioritized manner, they can significantly enhance their productivity. This tool aids in efficiently tracking immediate responsibilities and planning long-term projects, leading to a more structured and fruitful daily routine.",
+                    "Myria offers users a chance to immerse themselves in a diverse and expansive gaming universe, fostering an environment ripe for exploration and development.",
                 contentPosition: "r",
-                url: '/workImg/todolist/todolist1.png',
+                url: '/workImg/myria/myria1.png',
+                Icon: FiEye,
+            },
+            {
+                id: 2,
+                callout: "Encouraging",
+                title: "Join Myria now!",
+                description:
+                    "Achieving remarkable milestones, Myria stands out as the fastest expanding gaming ecosystem, boasting impressive statistics and accomplishments.",
+                contentPosition: "l",
+                url: '/workImg/myria/myria2.png',
+                Icon: FiEye,
+            },
+            {
+                id: 3,
+                callout: "Display",
+                title: "Large number of games",
+                description:
+                    "Within Myria, players are presented with a vast array of games spanning various genres, ensuring a rich and varied gaming experience.",
+                contentPosition: "r",
+                url: '/workImg/myria/myria3.png',
+                Icon: FiEye,
+            },
+            {
+                id: 4,
+                callout: "Specification",
+                title: "Delve deeper!",
+                description:
+                    "Myria provides detailed insights into each game, allowing users to access in-depth information and fully understand every aspect of their chosen games.",
+                contentPosition: "l",
+                url: '/workImg/myria/myria4.png',
+                Icon: FiEye,
+            },
+            {
+                id: 5,
+                callout: "Opportunity",
+                title: "Open your threshold and get rewards",
+                description:
+                    "Getting started with Myria is a straightforward process, and new users are welcomed with attractive rewards that enhance their gaming journey.",
+                contentPosition: "r",
+                url: '/workImg/myria/myria5.png',
+                Icon: FiEye,
+            },
+            {
+                id: 6,
+                callout: "Build up",
+                title: "Let's create your own game",
+                description:
+                    "Myria empowers its users to unleash their creativity and technical skills by offering the tools to design and create their own unique games.",
+                contentPosition: "l",
+                url: '/workImg/myria/myria6.png',
                 Icon: FiEye,
             },
            
             
 
         ],
-        bg: 'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80'
+        github: 'https://gitlab.com/myriaworld/myrianet/web/myria-frontend-v2',
+        demo: 'https://myria.com/',
+        bg: 'https://myria.com/seo/defaultImageVersion2.png'
     },
     {
         title: 'Chat Web',

@@ -26,6 +26,13 @@
     opacity: .3;
  
 }
+.github-icon,.demo-icon  {
+    cursor: pointer;
+}
+.github-icon:hover , .demo-icon:hover {
+    color: #0bd3b4;
+}
+
 @media screen and (max-width:1100px) {
     
 }
