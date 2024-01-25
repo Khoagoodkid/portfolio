@@ -252,40 +252,29 @@ export const slides = [
         bg: 'https://images.unsplash.com/photo-1535140728325-a4d3707eee61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80'
     },
 ]
-// export const slides = [
-//     {
-//         title: "Machu Picchu",
-//         subtitle: "Peru",
-//         description: "Adventure is never far away",
-//         image:
-//             "https://images.unsplash.com/photo-1571771019784-3ff35f4f4277?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-//     },
-//     {
-//         title: "Chamonix",
-//         subtitle: "France",
-//         description: "Let your dreams come true",
-//         image:
-//             "https://images.unsplash.com/photo-1581836499506-4a660b39478a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-//     },
-//     {
-//         title: "Mimisa Rocks",
-//         subtitle: "Australia",
-//         description: "A piece of heaven",
-//         image:
-//             "https://images.unsplash.com/photo-1566522650166-bd8b3e3a2b4b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-//     },
-//     {
-//         title: "Four",
-//         subtitle: "Australia",
-//         description: "A piece of heaven",
-//         image:
-//             "https://images.unsplash.com/flagged/photo-1564918031455-72f4e35ba7a6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-//     },
-//     {
-//         title: "Five",
-//         subtitle: "Australia",
-//         description: "A piece of heaven",
-//         image:
-//             "https://images.unsplash.com/photo-1579130781921-76e18892b57b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-//     }
-// ];
+export const educations = [
+    {
+        name:'Grokking The Coding Interview',
+        organization: 'Educative',
+        subtitle:'Data structure & Algorithms',
+        startDate: '5/2022',
+        endDate: '12/2022',
+        descriptions: [
+            "Challenging course that help aspiring software engineers learn many essential coding patterns",
+            "Learn to efficiently evaluate the tradeoffs between time and space complexity in different alogrithms"
+        ] 
+    },
+    {
+        name:'Big-O Green 17',
+        organization: 'Big-O Coding',
+        subtitle:'Data structure & Algorithms',
+        startDate: '10/2020',
+        endDate: '03/2021',
+        descriptions: [
+            "Recognizing that whether you are a programmer, or a computer scientist",
+            "Learn to solve real problems with optimal solutions"
+        ] 
+    }
+    
+
+]
