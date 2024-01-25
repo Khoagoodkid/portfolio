@@ -118,10 +118,10 @@ export const slides = [
         bg: 'https://myria.com/seo/defaultImageVersion2.png'
     },
     {
-        title: 'Chat Web',
-        path: 'chat_web',
+        title: 'Chatter Sphere',
+        path: 'chatter_sphere',
         subtitle: 'Founder: Khoa Ha',
-        frameworks: ["React", "Firebase", "NodeJS", "Javascript", "MUI"],
+        frameworks: ["React", "Firebase", "Web Socket", "Javascript", "MUI"],
         description: "This service is dedicated to connecting people globally while ensuring robust message security. It offers an array of features designed to enhance communication and user experience. Users can create conversations, personalize their chat space with changeable backgrounds, see who's online, and engage in video calls, among other interactive functionalities. This platform seamlessly blends secure connectivity with a rich suite of communication tools, fostering a dynamic and safe environment for global interaction.",
         images: [
 
@@ -177,7 +177,9 @@ export const slides = [
             },
 
         ],
-        bg: 'https://images.unsplash.com/photo-1530811761207-8d9d22f0a141?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+        bg: 'https://images.unsplash.com/photo-1530811761207-8d9d22f0a141?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        github: 'https://github.com/Khoagoodkid/ChatterSphere',
+        demo: 'https://chattersphere-wu4p.onrender.com/'
     },
     {
         title: 'Food Review',

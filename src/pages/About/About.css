@@ -183,7 +183,7 @@
     padding-left: 2em;
     padding-right: 2em;
 }
-.edu-card {
+    .edu-card {
     display: flex;
     width: 50em;
     flex-direction: column;
