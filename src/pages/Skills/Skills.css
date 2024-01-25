@@ -68,21 +68,55 @@
 }
 
 .cube {
-    width: 55%;
-    height: 100%;
+    /* border-radius: 9999px; */
+    width: 70%;
+    height: 100vh;
     /* background-color: red; */
-    padding-top: 3em;
+    position: relative;
     
     display: flex;
     flex-wrap: wrap;
     gap: 2.5em;
     justify-content: center;
     align-items: center;
+    background: repeating-radial-gradient(rgba(255, 255, 255,0.4), #111 5px, #111 100px);
   
-   
-    
 }
+.cube span {
+    font-family: 'poppin-bold';
+}
+.cube .cube-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .8em;
+    letter-spacing: .2em;
+    font-size: 2em;
+    background-color: #0bd3b4;
 
+    border-radius: 9999px;
+   
+}
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    /* background-color: #0bd3b4; */
+    border: 2px solid #0bd3b4;
+    border-radius: 9999px;
+    position: absolute;
+}
+.skill-item:hover {
+    background-color: #0bd3b4;
+    color: #111;
+    cursor: default;
+}
+.skill-item span {
+    font-family: 'poppin';
+}
 .framework-container {
     padding-top: 2em;
     width: 100%;
@@ -160,7 +194,7 @@
     width: 100%;
     height: 10em;
     /* background-color: red; */
-    padding-top: 10em;
+    padding-top: 3em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -177,6 +211,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 @media screen and (max-width:668px) {
     .skillsContainer {
@@ -190,7 +225,7 @@
     .skillsContainer .display {
         /* background-color: red; */
         width: 100%;
-        margin-top:10em;
+        margin-top:5em;
         align-items: center;
     }
 
@@ -208,13 +243,20 @@
     }
 
     .cube {
-        display: flex;
-       
-        align-items: center;
-        /* justify-content: center; */
+        /* border-radius: 9999px; */
+        width: 75%;
+        height: 50vh;
         /* background-color: red; */
-        gap: 4em;
-
+        background-size: cover;
+        background: repeating-radial-gradient(rgba(255, 255, 255,0.4), #111 5px, #111 40px);
+    }
+    .cube .cube-center {
+        font-size: 1em;
+        letter-spacing: .1em;
+       
+    }
+    .skill-item {
+        border: none;
     }
     .framework-container  {
         margin-top:6em;
@@ -259,5 +301,26 @@
     .line {
         width: 40%;
     }
-
+    .cube {
+        /* border-radius: 9999px; */
+        width: 80%;
+        height: 60vh;
+        /* background-color: red; */
+        background-size: cover;
+        background: repeating-radial-gradient(rgba(255, 255, 255,0.4), #111 5px, #111 60px);
+    }
+    .cube span {
+      
+    }
+    .cube .cube-center {
+    
+       
+    }
+    .skill-item {
+       
+      
+    }
+    .skill-item span {
+       
+    }
 }

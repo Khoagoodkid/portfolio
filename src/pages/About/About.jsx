@@ -100,7 +100,9 @@ function About() {
                                     {profile.map((p, i) => {
                                         return (
                                             <Reveal key={i}>
-                                                <div className='detailCard'>
+
+                                                <div  className='detailCard'>
+
 
                                                     <div>{p.img}</div>
                                                     <span>{p.text}</span>

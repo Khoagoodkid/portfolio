@@ -10,7 +10,7 @@ function ExpCard({ company, role, description, start_at, end_at, location, props
             <h2>{company}</h2>
           </Reveal>
           <Reveal>
-            <b style={{fontFamily:'poppin'}}>{start_at} - {end_at}</b>
+            <b style={{ fontFamily: 'poppin' }}>{start_at} - {end_at}</b>
           </Reveal>
         </div>
 
@@ -19,18 +19,20 @@ function ExpCard({ company, role, description, start_at, end_at, location, props
             <span>{role}</span>
           </Reveal>
           <Reveal>
-            <b style={{fontFamily:'poppin'}}>{location}</b>
+            <b style={{ fontFamily: 'poppin' }}>{location}</b>
 
           </Reveal>
         </div>
-        {/* <Reveal> */}
-        <p>
+        <div className='row-3'>
           <Reveal>
-            {description}
-          </Reveal>
-        </p>
+            <p>
+              {description}
 
-        {/* </Reveal> */}
+            </p>
+          </Reveal>
+
+        </div>
+
         <div className='props'>
           {props?.map((prop, i) => {
             return (
@@ -44,7 +46,7 @@ function ExpCard({ company, role, description, start_at, end_at, location, props
           })}
         </div>
       </div>
-      <div style={{ width: '85%', height:'.1em', backgroundColor:'#ebecf3',opacity:'.3'}} />
+      <div style={{ width: '85%', height: '.1em', backgroundColor: '#ebecf3', opacity: '.3' }} />
     </>
 
 
