@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import NavBar from '../../components/NavBar/NavBar'
 import "./About.css"
 
@@ -13,6 +13,8 @@ import { Link } from 'react-router-dom'
 import { PageContext } from '../../App'
 import TopBar from '../../components/TopBar/TopBar'
 import Reveal from '../../components/Reveal/Reveal'
+import { educations } from '../../works'
+import { motion, useScroll } from 'framer-motion'
 export const profile = [
     {
         name: 'birthday',
@@ -39,6 +41,14 @@ export const profile = [
 function About() {
     const { page, setPage } = useContext(PageContext)
     const [isShown, setIsShown] = useState(false);
+    const eduRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: eduRef,
+        offset: ["start end", "center start"]
+    })
+    useEffect(() => {
+        console.log(scrollYProgress)
+    },[scrollYProgress])
     useEffect(() => {
         setTimeout(() => {
             setIsShown(true);
@@ -50,7 +60,7 @@ function About() {
 
             <NavBar />
             <div className='aboutContainer'
-
+                ref={eduRef}
             >
                 <TopBar />
                 <Loading />
@@ -58,12 +68,12 @@ function About() {
                     <>
                         <div className="infoContainer">
                             <div className='profilePicture'>
-                                
-                                    <img src={profilePic} />
+
+                                <img src={profilePic} />
                                 <div className='layout'>
 
                                 </div>
-                                
+
 
                             </div>
 
@@ -72,7 +82,7 @@ function About() {
 
                                     <h1 style={{ color: '#0bd3b4', fontFamily: 'Gloria Hallelujah, cursive', fontWeight: 'bold' }}>Me, Myself & I</h1>
                                 </Reveal>
-                            
+
                                 <Reveal>
 
                                     <p>I'm mainly a Vietnamese web developer living in Winnipeg, Canada.
@@ -89,8 +99,8 @@ function About() {
                                 <div className='details'>
                                     {profile.map((p, i) => {
                                         return (
-                                            <Reveal>
-                                                <div key={i} className='detailCard'>
+                                            <Reveal key={i}>
+                                                <div className='detailCard'>
 
                                                     <div>{p.img}</div>
                                                     <span>{p.text}</span>
@@ -108,9 +118,20 @@ function About() {
 
                             </div>
                         </div>
-                        <div className='cubeContainer'>
+                        <div className='eduContainer' >
+                            <h1 style={{ fontFamily: 'poppin-bold', fontSize: '4em' }}>Education</h1>
+                        
+                               
+                                <ul className='edu-display'  >
+                                    {educations.map((edu, i) => {
 
-                            <FrameworkSlider />
+                                        return (
+                                            <EduCard edu={edu} key={i} />
+                                        )
+                                    })}
+                                </ul>
+
+                          
                         </div>
                     </>
                 }
@@ -118,5 +139,26 @@ function About() {
         </div>
     )
 }
+const EduCard = ({ edu }) => {
+    const { name, organization, subtitle, startDate, endDate, descriptions } = edu
+    return (
+        <motion.li
+            initial={{ opacity: 0, y: 100 }}
 
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: .5 }}
+            className='edu-card'
+        >
+            <h2>{name} <span>@{organization}</span></h2>
+            <subtitle>{startDate} - {endDate} | {subtitle}</subtitle>
+            <div className='edu-description'>
+                {descriptions.map((des, i) => {
+                    return (
+                        <li key={i}>{des}</li>
+                    )
+                })}
+            </div>
+        </motion.li>
+    )
+}
 export default About
