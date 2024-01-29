@@ -2,10 +2,10 @@
 import { motion } from "framer-motion";
 import "./ProjectCard.css"
 // eslint-disable-next-line react/prop-types
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';
-import { duration } from "@mui/material";
+
 export const ProjectCard = ({ project }) => {
     const navigate = useNavigate()
     const wordLimit = window.innerWidth <= 390 ? 50 : 150;

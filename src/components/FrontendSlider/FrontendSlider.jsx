@@ -6,9 +6,9 @@ import "./FrontendSlider.css"
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+    import "slick-carousel/slick/slick.css";
+    import "slick-carousel/slick/slick-theme.css";
+    import Slider from "react-slick";
 import Reveal from "../Reveal/Reveal";
 
 const imgs = [
