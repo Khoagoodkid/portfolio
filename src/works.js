@@ -2,45 +2,60 @@ import { FiDollarSign, FiEye, FiPlay, FiSearch } from "react-icons/fi";
 export const slides = [
     
     {
-        title: 'Kaya-AI',
-        path: 'kaya_ai',
-        subtitle: 'Founder: Kayapay.ai',
-        frameworks: ["NextJS", "Postgresql", "Python", "FastAPI", "MUI"],
-        description: `Kaya is a cutting-edge AI company specializing in the construction industry. With a focus on innovation, Kaya offers a suite of modules tailored to enhance efficiency in construction projects. The data warehousing component facilitates seamless data management, while a powerful web scraper efficiently gathers information on construction materials and house components from online sources. Kaya's
-         Connect platform acts as a unified hub, consolidating communication channels such as Slack and WhatsApp. 
-         Additionally, their Commerce platform leverages AI capabilities to assist users in identifying
-          the best deals for house materials and components. Complementing these features, the Knowledge platform employs 
-          an AI chatbot and intuitive graphs to provide quick and insightful answers, enabling users to visualize data effectively.
-           Kaya empowers construction professionals by seamlessly integrating technology and expertise, 
-           ultimately streamlining processes and optimizing decision-making in the field`,
+        title: 'Weather Wizard',
+        path: 'weather_wizard',
+        subtitle: 'Founder: Khoa Ha',
+        frameworks: ["NextJS", "Typescript", "Tailwind Css", "Scss"],
+        description: `A real-time weather application provides precise and detailed information, including ho
+        urly and daily forecasts for your current location, as well as the ability to search for and monitor the weather in any city of your choice.`,
         images: [
 
             {
                 id: 1,
-                callout: "Tracking",
-                title: "Viewing Phase",
+                callout: "Welcome",
+                title: "Introduction",
                 description:
-                    "Users can browse through various building projects, materials, and properties, gaining a comprehensive view of each project's offerings.",
+                    "Users can effortlessly view weather conditions in their local area.",
                 contentPosition: "r",
-                url: '/workImg/kaya-ai/kaya-ai1.jpg',
+                url: '/workImg/weather-wizard/weather-wizard1.png',
                 Icon: FiEye,
             },
             {
                 id: 2,
-                callout: "Interacting",
-                title: "Interact and decide",
+                callout: "Getting Data",
+                title: "Loading phase",
                 description:
-                    "Users have access to detailed invoices for each building project, aiding in informed decision-making. An AI robot is available to provide immediate and accurate responses to any invoice-related questions.",
+                    "Experience a captivating loading phase as the system aggregates a vast array of data specific to your location.",
                 contentPosition: "l",
-                url: '/workImg/kaya-ai/kaya-ai2.jpg',
+                url: '/workImg/weather-wizard/weather-wizard2.png',
+                Icon: FiSearch,
+            },
+            {
+                id: 3,
+                callout: "Tracking",
+                title: "Current and forecasting",
+                description:
+                    "Gain insights into the current weather conditions, including comprehensive 7-day and hourly forecasts. Additionally, explore weather updates for any city of interest",
+                contentPosition: "r",
+                url: '/workImg/weather-wizard/weather-wizard3.png',
+                Icon: FiSearch,
+            },
+            {
+                id: 2,
+                callout: "Interacting",
+                title: "Screen modes",
+                description:
+                    "Easily toggle between dark and light mode for optimal visual comfort.",
+                contentPosition: "l",
+                url: '/workImg/weather-wizard/weather-wizard4.png',
                 Icon: FiSearch,
             },
             
 
         ],
-        github: '',
-        demo: 'https://usekaya.ai/',
-        bg: 'https://www.state.gov/wp-content/uploads/2021/06/AI-Motherboard-scaled.jpg'
+        github: 'https://github.com/Khoagoodkid/weather-wizard',
+        demo: 'https://weather-wizard-peach.vercel.app/',
+        bg: '/workImg/weather-wizard/weather-wizard1.png'
     },
     {
         title: 'Myria',
