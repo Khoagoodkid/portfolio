@@ -28,7 +28,7 @@ export const profile = [
     },
     {
         name: 'address',
-        text: '220 Dysart Rd, Winnipeg, Canada',
+        text: 'Winnipeg, Canada',
         img: <LocationOnIcon />
     },
     {
@@ -141,7 +141,7 @@ function About() {
         </div>
     )
 }
-const EduCard = ({ edu }) => {
+const EduCard = ({ edu}) => {
     const { name, organization, subtitle, startDate, endDate, descriptions } = edu
     return (
         <motion.li
