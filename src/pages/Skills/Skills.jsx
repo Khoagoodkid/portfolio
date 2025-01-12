@@ -47,8 +47,12 @@ const exp = [
   {
     company: 'Myria',
     role: 'Software Engineer',
-    description: 'I work as a front-end developer. Building web UI',
-    props: ['Nextjs', 'Typescript', 'Git', 'Github'],
+    description: [
+      'Developed a front-end web application with NextJS',
+      'Implemented responsive headers for both desktop and mobile platforms with multiple features.',
+      'Developed responsive Nodes and Tokens pages, ensuring seamless user experience across devices.'
+    ],
+    props: ['Nextjs', 'Typescript', 'Git', 'Github', 'Tailwind Css', 'Figma'],
     start_at: '12/2023',
     end_at: '1/2024',
     location: 'Winnipeg, Canada'
@@ -56,8 +60,14 @@ const exp = [
   {
     company: 'Kayapay.ai',
     role: 'Software Engineer',
-    description: 'I work as a full-stack developer. Constructing web UI and processing data through frontend and backend. Training and building basic AI Model.',
-    props: ['React', 'Typescript', 'Python', 'Postgresql', 'Fast API', 'Git', 'Github', 'AI'],
+    description: [
+      'Engaged in a 3-month contract to develop a full-stack web application using with FastAPI serving a REST API with NextJS as the frontend as well as integrating with AI',
+      'Assisted in receiving data from AI and automatically sending messages to user via a bot',
+      'Building tables and graphs for tracking prices',
+      'Implemented converting AI’s data to costly usable data'
+
+    ],
+    props: ['React', 'Typescript', 'Python', 'Postgresql', 'Fast API', 'Git', 'Github', 'RESTful API'],
     start_at: '9/2023',
     end_at: '11/2023',
     location: 'Winnipeg, Canada'
