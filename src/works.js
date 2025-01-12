@@ -58,79 +58,60 @@ export const slides = [
         bg: '/workImg/weather-wizard/weather-wizard1.png'
     },
     {
-        title: 'Myria',
-        path: 'myria',
-        subtitle: 'Founder: Myria',
-        frameworks: ["NextJS", "Typescript", "Figma", "Tailwindcss"],
-        description: 'Myria is a blockchain gaming ecosystem powered by Myria’s Ethereum L2 scaling solution',
+        title: 'PDFinder',
+        path: 'pdfinder',
+        subtitle: 'Founder: Khoa Ha',
+        frameworks: ["ReactJs", "Tailwindcss", "FastAPI", "Langchain", "AWS", "RESTful API", "ChromaDB"],
+        description: 'An advanced bot that is capable of efficiently retrieving and processing data from PDF files',
         images: [
             {
                 id: 1,
-                callout: "Welcome",
+                callout: "Dashboard",
                 title: "Explore and develop",
                 description:
-                    "Myria offers users a chance to immerse themselves in a diverse and expansive gaming universe, fostering an environment ripe for exploration and development.",
+                    "PDFinder provides users with a user-friendly and intuitive dashboard, allowing them to quickly upload PDF files and start chatting with the bot instantly.",
                 contentPosition: "r",
-                url: '/workImg/myria/myria1.png',
+                url: '/workImg/pdfinder/pdfinder1.png',
                 Icon: FiEye,
             },
             {
                 id: 2,
-                callout: "Encouraging",
-                title: "Join Myria now!",
+                callout: "Dropbox",
+                title: "Upload File",
                 description:
-                    "Achieving remarkable milestones, Myria stands out as the fastest expanding gaming ecosystem, boasting impressive statistics and accomplishments.",
+                    "With Dropbox integration, users can effortlessly import or drag-and-drop files, making them ready for processing right away.",
                 contentPosition: "l",
-                url: '/workImg/myria/myria2.png',
+                url: '/workImg/pdfinder/pdfinder2.png',
                 Icon: FiEye,
             },
             {
                 id: 3,
-                callout: "Display",
-                title: "Large number of games",
+                callout: "Explore",
+                title: "Process File",
                 description:
-                    "Within Myria, players are presented with a vast array of games spanning various genres, ensuring a rich and varied gaming experience.",
+                    "The system leverages RAG (Retrieval-Augmented Generation) to efficiently read and analyze the content of PDF documents.",
                 contentPosition: "r",
-                url: '/workImg/myria/myria3.png',
+                url: '/workImg/pdfinder/pdfinder3.png',
                 Icon: FiEye,
             },
             {
                 id: 4,
                 callout: "Specification",
-                title: "Delve deeper!",
+                title: "Ask anything!",
                 description:
-                    "Myria provides detailed insights into each game, allowing users to access in-depth information and fully understand every aspect of their chosen games.",
+                    "You can ask any question about the contents of your PDF file and receive accurate, instant responses.",
                 contentPosition: "l",
-                url: '/workImg/myria/myria4.png',
+                url: '/workImg/pdfinder/pdfinder4.png',
                 Icon: FiEye,
             },
-            {
-                id: 5,
-                callout: "Opportunity",
-                title: "Open your threshold and get rewards",
-                description:
-                    "Getting started with Myria is a straightforward process, and new users are welcomed with attractive rewards that enhance their gaming journey.",
-                contentPosition: "r",
-                url: '/workImg/myria/myria5.png',
-                Icon: FiEye,
-            },
-            {
-                id: 6,
-                callout: "Build up",
-                title: "Let's create your own game",
-                description:
-                    "Myria empowers its users to unleash their creativity and technical skills by offering the tools to design and create their own unique games.",
-                contentPosition: "l",
-                url: '/workImg/myria/myria6.png',
-                Icon: FiEye,
-            },
+           
            
             
 
         ],
-        github: 'https://gitlab.com/myriaworld/myrianet/web/myria-frontend-v2',
-        demo: 'https://myria.com/',
-        bg: 'https://myria.com/seo/defaultImageVersion2.png'
+        github: 'https://github.com/Khoagoodkid/pdf-chat-bot-v2',
+        demo: 'https://pdfinder.vercel.app/',
+        bg: '/workImg/pdfinder/pdfinder1.png'
     },
     {
         title: 'Chat Web',
@@ -192,14 +173,16 @@ export const slides = [
             },
 
         ],
-        bg: 'https://images.unsplash.com/photo-1530811761207-8d9d22f0a141?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+        bg: 'https://images.unsplash.com/photo-1530811761207-8d9d22f0a141?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        demo: 'https://chattersphere-wu4p.onrender.com/',
+        github: 'https://github.com/Khoagoodkid/ChatterSphere'
     },
     {
-        title: 'Food Review',
-        path: 'food_review',
+        title: 'Quiz Crafters',
+        path: 'quiz_crafters',
         subtitle: 'Founder: Khoa Ha',
-        frameworks: ["React", "MongoDB", "NodeJS", "Javascript", "MUI"],
-        description: 'A service offering an in-depth exploration of diverse and unique Vietnamese cuisines. This platform provides detailed information about each dish, including its history, ingredients, and cultural significance, offering a comprehensive guide to the rich culinary heritage of Vietnam.',
+        frameworks: ["React", "MongoDB", "NodeJS", "Javascript", "Web Socket", "Express", "Algorithms"],
+        description: 'An online, real-time quiz competition that allows participants to showcase their extensive knowledge across a wide range of topics.',
         images: [
 
             {
@@ -207,64 +190,76 @@ export const slides = [
                 callout: "Introduction",
                 title: "Welcome",
                 description:
-                    "Our welcome page captivates visitors with a series of enthralling animations that irresistibly draw their attention and spark curiosity about what lies within.",
+                    "The home page offers users the option to either create and host rooms or join existing rooms using an ID.",
                 contentPosition: "r",
-                url: '/workImg/foodreview/foodreview1.jpg',
+                url: '/workImg/quizcrafters/quizcrafters1.png',
                 Icon: FiEye,
             },
             {
                 id: 2,
-                callout: "Menu",
-                title: "Let's have a tour !",
+                callout: "Lobby",
+                title: "View players",
                 description:
-                    "Upon arrival, visitors are greeted with the opportunity to explore a diverse selection of traditional Vietnamese dishes. Each food item comes with an option to delve into its specific details, offering a rich cultural journey.",
+                    "Room hosts can view the number of participants and see who has joined the room.",
                 contentPosition: "l",
-                url: '/workImg/foodreview/foodreview2.jpg',
+                url: '/workImg/quizcrafters/quizcrafters2.png',
                 Icon: FiSearch,
             },
             {
                 id: 3,
-                callout: "Description",
-                title: "Brief Introduction",
+                callout: "Quiz",
+                title: "Create and view collection",
                 description:
-                    "Before they embark on their culinary exploration, visitors are presented with a brief yet informative paragraph. This introduction covers the unique ingredients and the historical origins of each dish, setting the stage for a deeper understanding and appreciation.",
+                    "Hosts can create a collection of questions, manage them, and launch the quiz when ready.",
                 contentPosition: "r",
-                url: '/workImg/foodreview/foodreview3.jpg',
+                url: '/workImg/quizcrafters/quizcrafters3.png',
                 Icon: FiPlay,
             },
             {
                 id: 4,
                 callout: "Interacting",
-                title: "Let's talk to the bot",
+                title: "Let's talk to others",
                 description:
-                    "Enhancing the interactive experience, a charming robot assistant is available to provide insights into the selected food’s distinct characteristics and nutritional properties.",
+                    "Players can join the lobby, interact, and chat with each other before the game begins.",
                 contentPosition: "l",
-                url: '/workImg/foodreview/foodreview4.jpg',
+                url: '/workImg/quizcrafters/quizcrafters4.png',
                 Icon: FiDollarSign,
             },
             {
                 id: 5,
-                callout: "Reviewing",
-                title: "What others talk about",
+                callout: "Question Dashboard",
+                title: "Hit the answer!",
                 description:
-                    "On the right side of the screen, visitors can find a detailed section dedicated to each food item. This area includes an array of customer reviews, offering personal perspectives and experiences related to the dish.",
+                    "During the quiz, players are presented with four answer choices and earn points by selecting the correct ones to compete with others.",
                 contentPosition: "r",
-                url: '/workImg/foodreview/foodreview5.jpg',
+                url: '/workImg/quizcrafters/quizcrafters5.png',
                 Icon: FiDollarSign,
             },
             {
                 id: 6,
-                callout: "Inspecting",
-                title: "See how the food looks like",
+                callout: "Scoreboard",
+                title: "Dynamically view scores",
                 description:
-                    "Finally, the journey is enriched with a captivating slideshow of vivid, real-life images of the food. These images serve not only to visually entice the viewer but also to provide a more immersive and authentic glimpse into the world of Vietnamese cuisine.",
+                    "After each question, players can view their scores and compare them with those of their competitors.",
                 contentPosition: "l",
-                url: '/workImg/foodreview/foodreview6.jpg',
+                url: '/workImg/quizcrafters/quizcrafters6.png',
+                Icon: FiDollarSign,
+            },
+            {
+                id: 7,
+                callout: "Finish",
+                title: "Congrats to the Winner!",
+                description:
+                    "At the end of the game, the player with the highest overall score is crowned the winner!",
+                contentPosition: "l",
+                url: '/workImg/quizcrafters/quizcrafters7.png',
                 Icon: FiDollarSign,
             },
 
         ],
-        bg: 'https://images.unsplash.com/photo-1535140728325-a4d3707eee61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80'
+        bg: '/workImg/quizcrafters/quizcrafters1.png',
+        demo: 'https://quiz-crafters.onrender.com/',
+        github: 'https://github.com/Khoagoodkid/quiz-crafters'
     },
 ]
 // export const slides = [
