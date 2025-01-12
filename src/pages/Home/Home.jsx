@@ -4,7 +4,7 @@ import NavBar from '../../components/NavBar/NavBar'
 
 import Loading from '../../components/Loading/Loading'
 import iconsDark from '../../assets/mainIconsdark.svg'
-import Khoa from '../../assets/Khoa.png'
+import Khoa from '../../assets/Khoa2.png'
 import MouseEffect from '../../components/MouseEffect/MouseEffect'
 
 import { Link } from 'react-router-dom'
