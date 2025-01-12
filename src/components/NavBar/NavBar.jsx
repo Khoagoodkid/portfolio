@@ -1,4 +1,4 @@
-import  { useContext, useState } from 'react'
+import  { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import "./NavBar.css"
 
@@ -10,11 +10,16 @@ import { PageContext } from '../../App';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-
+import { useLocation } from 'react-router-dom'
 
 function NavBar() {
+    const location = useLocation();
+    console.log(location.pathname)
     const [isOpen, setIsOpen] = useState(false)
     const { page, setPage } = useContext(PageContext)
+    useEffect(() => {
+        setPage(location.pathname.substring(1));
+    },[location])
     return (
         <>
 
@@ -31,8 +36,8 @@ function NavBar() {
                     <CloseIcon className='closeIcon' onClick={() => setIsOpen(false)}
                         sx={{ fontSize: '3em', display: isOpen ? 'block' : 'none', cursor: 'pointer' }}
                     />
-                    <Link className = {page === 'home' ? 'navigator selected' : 'navigator'}
-                     onClick={() => setPage('home')}
+                    <Link className = {page === '' ? 'navigator selected' : 'navigator'}
+                    //  onClick={() => setPage('home')}
                     to='/'>
                         <HomeIcon 
                            className='nav-icon'
@@ -41,21 +46,21 @@ function NavBar() {
                         {/* <span>Home</span> */}
                     </Link>
                     <Link className = {page === 'about' ? 'navigator selected' : 'navigator'}
-                     onClick={() => setPage('about')}
+                    //  onClick={() => setPage('about')}
                     to='/about'>
                         <PersonIcon
                              className='nav-icon'
                            />
                     </Link>
                     <Link className = {page === 'skills' ? 'navigator selected' : 'navigator'} 
-                    onClick={() => setPage('skills')}
+                    // onClick={() => setPage('skills')}
                     to='/skills'>
                         <SettingsIcon
                          className='nav-icon'
                            />
                     </Link>
                     <Link className = {page === 'work' ? 'navigator selected' : 'navigator'}
-                     onClick={() => setPage('work')}
+                    //  onClick={() => setPage('work')}
                     to='/work'>
                         <DashboardIcon
                             className='nav-icon'
@@ -63,7 +68,7 @@ function NavBar() {
 
                     </Link>
                     <Link className = {page === 'contact' ? 'navigator selected' : 'navigator'} 
-                      onClick={() => setPage('contact')}
+                    //   onClick={() => setPage('contact')}
                     to='/contact' >
                         <EmailIcon 
                             className='nav-icon'

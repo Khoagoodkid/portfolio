@@ -2,73 +2,141 @@ import { FiDollarSign, FiEye, FiPlay, FiSearch } from "react-icons/fi";
 export const slides = [
     
     {
-        title: 'Kaya-AI',
-        path: 'kaya_ai',
-        subtitle: 'Founder: Kayapay.ai',
-        frameworks: ["NextJS", "Postgresql", "Python", "FastAPI", "MUI"],
-        description: `Kaya is a cutting-edge AI company specializing in the construction industry. With a focus on innovation, Kaya offers a suite of modules tailored to enhance efficiency in construction projects. The data warehousing component facilitates seamless data management, while a powerful web scraper efficiently gathers information on construction materials and house components from online sources. Kaya's
-         Connect platform acts as a unified hub, consolidating communication channels such as Slack and WhatsApp. 
-         Additionally, their Commerce platform leverages AI capabilities to assist users in identifying
-          the best deals for house materials and components. Complementing these features, the Knowledge platform employs 
-          an AI chatbot and intuitive graphs to provide quick and insightful answers, enabling users to visualize data effectively.
-           Kaya empowers construction professionals by seamlessly integrating technology and expertise, 
-           ultimately streamlining processes and optimizing decision-making in the field`,
+        title: 'Weather Wizard',
+        path: 'weather_wizard',
+        subtitle: 'Founder: Khoa Ha',
+        frameworks: ["NextJS", "Typescript", "Tailwind Css", "Scss"],
+        description: `A real-time weather application provides precise and detailed information, including ho
+        urly and daily forecasts for your current location, as well as the ability to search for and monitor the weather in any city of your choice.`,
         images: [
 
             {
                 id: 1,
-                callout: "Tracking",
-                title: "Viewing Phase",
+                callout: "Welcome",
+                title: "Introduction",
                 description:
-                    "Users can browse through various building projects, materials, and properties, gaining a comprehensive view of each project's offerings.",
+                    "Users can effortlessly view weather conditions in their local area.",
                 contentPosition: "r",
-                url: '/workImg/kaya-ai/kaya-ai1.jpg',
+                url: '/workImg/weather-wizard/weather-wizard1.png',
                 Icon: FiEye,
             },
             {
                 id: 2,
-                callout: "Interacting",
-                title: "Interact and decide",
+                callout: "Getting Data",
+                title: "Loading phase",
                 description:
-                    "Users have access to detailed invoices for each building project, aiding in informed decision-making. An AI robot is available to provide immediate and accurate responses to any invoice-related questions.",
+                    "Experience a captivating loading phase as the system aggregates a vast array of data specific to your location.",
                 contentPosition: "l",
-                url: '/workImg/kaya-ai/kaya-ai2.jpg',
+                url: '/workImg/weather-wizard/weather-wizard2.png',
+                Icon: FiSearch,
+            },
+            {
+                id: 3,
+                callout: "Tracking",
+                title: "Current and forecasting",
+                description:
+                    "Gain insights into the current weather conditions, including comprehensive 7-day and hourly forecasts. Additionally, explore weather updates for any city of interest",
+                contentPosition: "r",
+                url: '/workImg/weather-wizard/weather-wizard3.png',
+                Icon: FiSearch,
+            },
+            {
+                id: 2,
+                callout: "Interacting",
+                title: "Screen modes",
+                description:
+                    "Easily toggle between dark and light mode for optimal visual comfort.",
+                contentPosition: "l",
+                url: '/workImg/weather-wizard/weather-wizard4.png',
                 Icon: FiSearch,
             },
             
 
         ],
-        bg: 'https://www.state.gov/wp-content/uploads/2021/06/AI-Motherboard-scaled.jpg'
+        github: 'https://github.com/Khoagoodkid/weather-wizard',
+        demo: 'https://weather-wizard-peach.vercel.app/',
+        bg: '/workImg/weather-wizard/weather-wizard1.png'
     },
     {
-        title: 'Todo List',
-        path: 'todo_list',
-        subtitle: 'Founder: Khoa Ha',
-        frameworks: ["React", "MongoDB", "NodeJS", "Javascript", "Laravel", "PHP", "SQL"],
-        description: 'A service designed to assist you in remembering tasks to be completed. This tool effectively organizes and reminds you of your pending responsibilities, ensuring that you stay on track and complete your work efficiently.',
+        title: 'Myria',
+        path: 'myria',
+        subtitle: 'Founder: Myria',
+        frameworks: ["NextJS", "Typescript", "Figma", "Tailwindcss"],
+        description: 'Myria is a blockchain gaming ecosystem powered by Myria’s Ethereum L2 scaling solution',
         images: [
-
             {
                 id: 1,
-                callout: "Listing",
-                title: "It's really helpful !",
+                callout: "Welcome",
+                title: "Explore and develop",
                 description:
-                    "Users have the ability to create their own accounts and effectively manage a daily To-Do List. By organizing tasks in a relevant and prioritized manner, they can significantly enhance their productivity. This tool aids in efficiently tracking immediate responsibilities and planning long-term projects, leading to a more structured and fruitful daily routine.",
+                    "Myria offers users a chance to immerse themselves in a diverse and expansive gaming universe, fostering an environment ripe for exploration and development.",
                 contentPosition: "r",
-                url: '/workImg/todolist/todolist1.png',
+                url: '/workImg/myria/myria1.png',
+                Icon: FiEye,
+            },
+            {
+                id: 2,
+                callout: "Encouraging",
+                title: "Join Myria now!",
+                description:
+                    "Achieving remarkable milestones, Myria stands out as the fastest expanding gaming ecosystem, boasting impressive statistics and accomplishments.",
+                contentPosition: "l",
+                url: '/workImg/myria/myria2.png',
+                Icon: FiEye,
+            },
+            {
+                id: 3,
+                callout: "Display",
+                title: "Large number of games",
+                description:
+                    "Within Myria, players are presented with a vast array of games spanning various genres, ensuring a rich and varied gaming experience.",
+                contentPosition: "r",
+                url: '/workImg/myria/myria3.png',
+                Icon: FiEye,
+            },
+            {
+                id: 4,
+                callout: "Specification",
+                title: "Delve deeper!",
+                description:
+                    "Myria provides detailed insights into each game, allowing users to access in-depth information and fully understand every aspect of their chosen games.",
+                contentPosition: "l",
+                url: '/workImg/myria/myria4.png',
+                Icon: FiEye,
+            },
+            {
+                id: 5,
+                callout: "Opportunity",
+                title: "Open your threshold and get rewards",
+                description:
+                    "Getting started with Myria is a straightforward process, and new users are welcomed with attractive rewards that enhance their gaming journey.",
+                contentPosition: "r",
+                url: '/workImg/myria/myria5.png',
+                Icon: FiEye,
+            },
+            {
+                id: 6,
+                callout: "Build up",
+                title: "Let's create your own game",
+                description:
+                    "Myria empowers its users to unleash their creativity and technical skills by offering the tools to design and create their own unique games.",
+                contentPosition: "l",
+                url: '/workImg/myria/myria6.png',
                 Icon: FiEye,
             },
            
             
 
         ],
-        bg: 'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80'
+        github: 'https://gitlab.com/myriaworld/myrianet/web/myria-frontend-v2',
+        demo: 'https://myria.com/',
+        bg: 'https://myria.com/seo/defaultImageVersion2.png'
     },
     {
-        title: 'Chat Web',
-        path: 'chat_web',
+        title: 'Chatter Sphere',
+        path: 'chatter_sphere',
         subtitle: 'Founder: Khoa Ha',
-        frameworks: ["React", "Firebase", "NodeJS", "Javascript", "MUI"],
+        frameworks: ["React", "Firebase", "Web Socket", "Javascript", "MUI"],
         description: "This service is dedicated to connecting people globally while ensuring robust message security. It offers an array of features designed to enhance communication and user experience. Users can create conversations, personalize their chat space with changeable backgrounds, see who's online, and engage in video calls, among other interactive functionalities. This platform seamlessly blends secure connectivity with a rich suite of communication tools, fostering a dynamic and safe environment for global interaction.",
         images: [
 
@@ -124,7 +192,9 @@ export const slides = [
             },
 
         ],
-        bg: 'https://images.unsplash.com/photo-1530811761207-8d9d22f0a141?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+        bg: 'https://images.unsplash.com/photo-1530811761207-8d9d22f0a141?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+        github: 'https://github.com/Khoagoodkid/ChatterSphere',
+        demo: 'https://chattersphere-wu4p.onrender.com/'
     },
     {
         title: 'Food Review',
@@ -199,40 +269,27 @@ export const slides = [
         bg: 'https://images.unsplash.com/photo-1535140728325-a4d3707eee61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80'
     },
 ]
-// export const slides = [
-//     {
-//         title: "Machu Picchu",
-//         subtitle: "Peru",
-//         description: "Adventure is never far away",
-//         image:
-//             "https://images.unsplash.com/photo-1571771019784-3ff35f4f4277?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-//     },
-//     {
-//         title: "Chamonix",
-//         subtitle: "France",
-//         description: "Let your dreams come true",
-//         image:
-//             "https://images.unsplash.com/photo-1581836499506-4a660b39478a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-//     },
-//     {
-//         title: "Mimisa Rocks",
-//         subtitle: "Australia",
-//         description: "A piece of heaven",
-//         image:
-//             "https://images.unsplash.com/photo-1566522650166-bd8b3e3a2b4b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-//     },
-//     {
-//         title: "Four",
-//         subtitle: "Australia",
-//         description: "A piece of heaven",
-//         image:
-//             "https://images.unsplash.com/flagged/photo-1564918031455-72f4e35ba7a6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-//     },
-//     {
-//         title: "Five",
-//         subtitle: "Australia",
-//         description: "A piece of heaven",
-//         image:
-//             "https://images.unsplash.com/photo-1579130781921-76e18892b57b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-//     }
-// ];
+export const educations = [
+  {
+    name: "Big-O Orange 17",
+    organization: "Big-O Coding",
+    subtitle: "Data structure & Algorithms",
+    startDate: "05/2024",
+    endDate: "07/2024",
+    descriptions: [
+      "Learn advanced data structure & algorithms",
+      "Learn to solve real problems with optimal solutions",
+    ],
+  },
+  {
+    name: "Grokking The Coding Interview",
+    organization: "Educative",
+    subtitle: "Data structure & Algorithms",
+    startDate: "5/2022",
+    endDate: "12/2022",
+    descriptions: [
+      "Challenging course that help aspiring software engineers learn many essential coding patterns",
+      "Learn to efficiently evaluate the tradeoffs between time and space complexity in different alogrithms",
+    ],
+  },
+];

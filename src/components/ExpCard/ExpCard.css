@@ -38,7 +38,9 @@
 .expcard-body .row-3 {
     display: flex;
     width: 100%;
+
     text-align: start;
+
 }
 .expcard-body .row-1, .expcard-body .row-2{
     display: flex;

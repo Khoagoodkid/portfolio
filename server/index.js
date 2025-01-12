@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const express = require('express')
 
 const app = express()
@@ -16,7 +17,7 @@ app.get('/', (req, res) => {
         'hello': 'hi:'
     })
 })
-const appPass = 'imvbdyooaqjgvjtq'
+const appPass = 'pialeziiazgylkhw'
 const sendEmail = (mail) => {
    
     let transporter = nodemailer.createTransport({
