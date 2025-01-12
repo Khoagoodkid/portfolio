@@ -114,10 +114,10 @@ export const slides = [
         bg: '/workImg/pdfinder/pdfinder1.png'
     },
     {
-        title: 'Chat Web',
-        path: 'chat_web',
+        title: 'Chatter Sphere',
+        path: 'chatter_sphere',
         subtitle: 'Founder: Khoa Ha',
-        frameworks: ["React", "Firebase", "NodeJS", "Javascript", "MUI"],
+        frameworks: ["React", "Firebase", "Web Socket", "Javascript", "MUI"],
         description: "This service is dedicated to connecting people globally while ensuring robust message security. It offers an array of features designed to enhance communication and user experience. Users can create conversations, personalize their chat space with changeable backgrounds, see who's online, and engage in video calls, among other interactive functionalities. This platform seamlessly blends secure connectivity with a rich suite of communication tools, fostering a dynamic and safe environment for global interaction.",
         images: [
 
@@ -174,8 +174,10 @@ export const slides = [
 
         ],
         bg: 'https://images.unsplash.com/photo-1530811761207-8d9d22f0a141?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-        demo: 'https://chattersphere-wu4p.onrender.com/',
-        github: 'https://github.com/Khoagoodkid/ChatterSphere'
+
+        github: 'https://github.com/Khoagoodkid/ChatterSphere',
+        demo: 'https://chattersphere-wu4p.onrender.com/'
+
     },
     {
         title: 'Quiz Crafters',
@@ -262,40 +264,27 @@ export const slides = [
         github: 'https://github.com/Khoagoodkid/quiz-crafters'
     },
 ]
-// export const slides = [
-//     {
-//         title: "Machu Picchu",
-//         subtitle: "Peru",
-//         description: "Adventure is never far away",
-//         image:
-//             "https://images.unsplash.com/photo-1571771019784-3ff35f4f4277?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-//     },
-//     {
-//         title: "Chamonix",
-//         subtitle: "France",
-//         description: "Let your dreams come true",
-//         image:
-//             "https://images.unsplash.com/photo-1581836499506-4a660b39478a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-//     },
-//     {
-//         title: "Mimisa Rocks",
-//         subtitle: "Australia",
-//         description: "A piece of heaven",
-//         image:
-//             "https://images.unsplash.com/photo-1566522650166-bd8b3e3a2b4b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-//     },
-//     {
-//         title: "Four",
-//         subtitle: "Australia",
-//         description: "A piece of heaven",
-//         image:
-//             "https://images.unsplash.com/flagged/photo-1564918031455-72f4e35ba7a6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-//     },
-//     {
-//         title: "Five",
-//         subtitle: "Australia",
-//         description: "A piece of heaven",
-//         image:
-//             "https://images.unsplash.com/photo-1579130781921-76e18892b57b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-//     }
-// ];
+export const educations = [
+  {
+    name: "Big-O Orange 17",
+    organization: "Big-O Coding",
+    subtitle: "Data structure & Algorithms",
+    startDate: "05/2024",
+    endDate: "07/2024",
+    descriptions: [
+      "Learn advanced data structure & algorithms",
+      "Learn to solve real problems with optimal solutions",
+    ],
+  },
+  {
+    name: "Grokking The Coding Interview",
+    organization: "Educative",
+    subtitle: "Data structure & Algorithms",
+    startDate: "5/2022",
+    endDate: "12/2022",
+    descriptions: [
+      "Challenging course that help aspiring software engineers learn many essential coding patterns",
+      "Learn to efficiently evaluate the tradeoffs between time and space complexity in different alogrithms",
+    ],
+  },
+];

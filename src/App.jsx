@@ -1,7 +1,7 @@
 import { useState, createContext } from 'react'
 
 import './App.css'
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 import AnimatedRoutes from './components/AnimatedRoutes'
 

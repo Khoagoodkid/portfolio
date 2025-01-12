@@ -21,7 +21,7 @@ export const socials = [
     }, {
         name:'linkedin',
         icon:  <LinkedInIcon className='icon'/>,
-        link:'https://www.linkedin.com/in/james-ha-76b463296/'
+        link:'https://www.linkedin.com/in/james-ha-60488a327/'
     }
 ]
 

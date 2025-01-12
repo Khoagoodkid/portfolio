@@ -10,50 +10,25 @@ import SmartToyIcon from "@mui/icons-material/SmartToy";
 import TopBar from "../../components/TopBar/TopBar";
 import ExpCard from "../../components/ExpCard/ExpCard";
 import Reveal from "../../components/Reveal/Reveal";
-const skills = [
-  {
-    name: "Frontend",
-    percent: 90,
-    color: "#58ed55",
-    boxShadow: "rgba(88, 237, 85,0.5)",
-  },
-  {
-    name: "Backend",
-    percent: 75,
-    color: "#f73650",
-    boxShadow: "rgba(247, 54, 80,0.5)",
-  },
-  {
-    name: "Javascript",
-    percent: 90,
-    color: "#ffee03",
-    boxShadow: "rgba(255, 238, 3,0.5)",
-  },
-  {
-    name: "Python",
-    percent: 60,
-    color: "#5656f5",
-    boxShadow: "rgba(86, 86, 245,0.5)",
-  },
-  {
-    name: "PHP",
-    percent: 50,
-    color: "#ffa14f",
-    boxShadow: "rgba(255, 161, 79,0.5)",
-  },
-  {
-    name: "C++",
-    percent: 95,
-    color: "#781aa1",
-    boxShadow: "rgba(120, 26, 161,0.5)",
-  },
-  {
-    name: "C#",
-    percent: 60,
-    color: "#f218bc",
-    boxShadow: "rgba(242, 24, 188,0.5)",
-  },
-];
+import {motion} from "framer-motion"
+const skills =[
+  {name: "ReactJS", x: "-28vw", y: "-5vw"},
+  {name: "NextJS", x: "-10vw", y: "-8vw"},
+  {name: "Javascript", x: "20vw", y: "6vw"},
+  {name: "Python", x: "0vw", y: "12vw"},
+  {name: "PHP", x: "-20vw", y: "-15vw"},
+  {name: "C++", x: "15vw", y: "-12vw"},
+  {name: "MongoDB", x: "25vw", y: "-5vw"},
+  {name: "Tailwindcss", x: "-22vw", y: "4vw"},
+  {name: "PostgreSQL", x: "18vw", y: "18vw"},
+  {name: "Nodejs", x: "20vw", y: "-21.65vw"},
+  {name: "Laravel", x: "-10vw", y: "-21.65vw"},
+  {name: "Firebase", x: "-5.73vw", y: "23.78vw"},
+  {name: "Typescript", x: "0vw", y: "-15vw"},
+  {name: "FastAPI", x: "-25vw", y: "18vw"},
+  {name: "C#", x: "30vw", y: "13vw"}
+]
+;
 const services = [
   {
     name: "User Experience / User Interface",
@@ -72,8 +47,12 @@ const exp = [
   {
     company: 'Myria',
     role: 'Software Engineer',
-    description: 'I work as a front-end developer. Building web UI',
-    props: ['Nextjs', 'Typescript', 'Git', 'Github'],
+    description: [
+      'Developed a front-end web application with NextJS',
+      'Implemented responsive headers for both desktop and mobile platforms with multiple features.',
+      'Developed responsive Nodes and Tokens pages, ensuring seamless user experience across devices.'
+    ],
+    props: ['Nextjs', 'Typescript', 'Git', 'Github', 'Tailwind Css', 'Figma'],
     start_at: '12/2023',
     end_at: '1/2024',
     location: 'Winnipeg, Canada'
@@ -81,13 +60,37 @@ const exp = [
   {
     company: 'Kayapay.ai',
     role: 'Software Engineer',
-    description: 'I work as a full-stack developer. Constructing web UI and processing data through frontend and backend. Training and building basic AI Model.',
-    props: ['React', 'Typescript', 'Python', 'Postgresql', 'Fast API', 'Git', 'Github', 'AI'],
+    description: [
+      'Engaged in a 3-month contract to develop a full-stack web application using with FastAPI serving a REST API with NextJS as the frontend as well as integrating with AI',
+      'Assisted in receiving data from AI and automatically sending messages to user via a bot',
+      'Building tables and graphs for tracking prices',
+      'Implemented converting AI’s data to costly usable data'
+
+    ],
+    props: ['React', 'Typescript', 'Python', 'Postgresql', 'Fast API', 'Git', 'Github', 'RESTful API'],
     start_at: '9/2023',
     end_at: '11/2023',
     location: 'Winnipeg, Canada'
   },
 ]
+
+const SkillItem = ({name,x,y}) => {
+  return (
+    <motion.div 
+    className="skill-item"
+    // whileHover={{background:'#0bd3b4', color:'#111'}}
+    initial={{x:0,y:0}}
+    whileInView={{x:x,y:y, transition:{duration:1.5,delay:.5}}}
+    viewport={{ once: true }}
+    exit
+    // transition={{duration:1.5,delay:.5}}
+    exitHover ={{x:0,y:0, background:'#111'}}
+    >
+      <span>{name}</span>
+    </motion.div>
+  )
+}
+
 function Skills() {
   const [isShown, setIsShown] = useState(false);
   useEffect(() => {
@@ -173,7 +176,7 @@ function Skills() {
               <div className="title">
 
                 <Reveal>
-                  <h2>Progress </h2>
+                  <h2>Techniques </h2>
                 </Reveal>
 
                 <h2 style={{ color: "#0bd3b4" }}>.</h2>
@@ -181,14 +184,15 @@ function Skills() {
                 <div className="line"></div>
               </div>
               <div className="cube">
+                <div className="cube-center">
+                  <span>WEB</span>
+                </div>
                 {skills.map((s, index) => {
                   return (
-                    // <div style={{ width: '100%', height: '8em' }} key={index}>
-
-                    <ProgressBar skill={s}  key = {index}/>
-                    // </div>
+                    <SkillItem name={s.name} x={s.x} y = {s.y} key={index}/>
                   );
                 })}
+
               </div>
             </div>
             <div className="exp-container">
@@ -208,17 +212,17 @@ function Skills() {
                 {exp.map((e, index) => {
                   return (
                     <>
-                    <ExpCard
-                      key = {index}
-                      company={e.company}
-                      role={e.role}
-                      start_at={e.start_at}
-                      end_at={e.end_at}
-                      props={e.props}
-                      description={e.description}
-                      location={e.location}
-                    />
-                    
+                      <ExpCard
+                        key={index}
+                        company={e.company}
+                        role={e.role}
+                        start_at={e.start_at}
+                        end_at={e.end_at}
+                        props={e.props}
+                        description={e.description}
+                        location={e.location}
+                      />
+
                     </>
 
 

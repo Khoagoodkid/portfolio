@@ -2,7 +2,7 @@
     /* margin-top: 1em; */
     padding: 1em;
     position: relative;
-    width: 85%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -18,7 +18,7 @@
     font-size: 1.2em;
 }
 .expcard-body p {
-    width: 90%;
+    width: 100%;
     text-align: left;
 }
 .expcard-body .props {
@@ -34,6 +34,13 @@
     padding-left: .7em;
     padding-right: .7em;
     border-radius: 3em;
+}
+.expcard-body .row-3 {
+    display: flex;
+    width: 100%;
+
+    text-align: start;
+
 }
 .expcard-body .row-1, .expcard-body .row-2{
     display: flex;
