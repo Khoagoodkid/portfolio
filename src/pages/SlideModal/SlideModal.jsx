@@ -20,7 +20,7 @@ const SlideModal = () => {
       />
       <div style={{ "display": "flex", "flexDirection": "column", "justifyContent": "center", "alignItems": "center", "height": "5rem" }}>
 
-        <h1 style={{"fontFamily" : "poppin-bold","display": "block", "paddingTop": "0.25rem", "paddingBottom": "0.25rem", "paddingLeft": "1rem", "paddingRight": "1rem", "marginTop": "0.5rem", "borderRadius": "9999px", "fontWeight": 500, "textAlign": "center", "color": "#ffffff", "backgroundColor": "#0bd3b4" }}>
+        <h1 style={{"fontFamily" : "poppin-bold", "letterSpacing": ".2em", "fontSize":"5em"}}>
           {project?.title}
         </h1>
       </div>

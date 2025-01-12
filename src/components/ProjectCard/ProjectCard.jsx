@@ -37,7 +37,7 @@ export const ProjectCard = ({ project }) => {
                     <span style={{ fontSize: '.7em', fontFamily: 'poppin' }}> {subtitle} </span>
                 </h2>
 
-                <div style={{ display: 'flex', flexWrap: 'wrap', width: '90%', }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', width: '100%', }}>
                     {frameworks.map((f, index) => {
                         return (
                             <span key={f} style={{ color: '#0aff9d', fontFamily: 'poppin', }}>{f}{index < frameworks.length - 1 &&
