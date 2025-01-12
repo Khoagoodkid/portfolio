@@ -25,10 +25,14 @@ function ExpCard({ company, role, description, start_at, end_at, location, props
         </div>
         <div className='row-3'>
           <Reveal>
-            <p>
-              {description}
+            <ul>
+              {description.map((d, index) => {
+                return (
+                  <li key={index}>{d}</li>
+                )
+              })}
 
-            </p>
+            </ul>
           </Reveal>
 
         </div>
