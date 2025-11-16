@@ -31,7 +31,7 @@ function Contact() {
             toast.error("Please fill the form before submitting")
             return;
         }
-        const api = 'https://portfolio-backend-qxfn.onrender.com/email'
+        const api = import.meta.env.VITE_API_BASE + "/email"
         // const api = 'http://localhost:3000/email'
         axios.post(api, user)
         setUser({
@@ -87,7 +87,7 @@ function Contact() {
 
                                 <span>If you find me impressive</span><br />
 
-                                <span>Please don't be hesitant to contact me via information above or form underneath. </span>
+                                <span>Please dont be hesitant to contact me via information above or form underneath. </span>
                             </Reveal>
 
 
