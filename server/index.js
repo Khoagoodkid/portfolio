@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+require('dotenv').config()
 const express = require('express')
 
 const app = express()
@@ -17,7 +18,7 @@ app.get('/', (req, res) => {
         'hello': 'hi:'
     })
 })
-const appPass = 'pialeziiazgylkhw'
+const appPass = process.env.APP_PASS
 const sendEmail = (mail) => {
    
     let transporter = nodemailer.createTransport({

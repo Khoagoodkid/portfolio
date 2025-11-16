@@ -56,16 +56,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
     }
     .navigator.selected {
      
         color:#0bd3b4;
-        border-right: .2em solid #0bd3b4;
         background-color: rgba(64, 63, 63,.7);
     }
     .navigator:hover{
         color: #0bd3b4;
-        border-right: .2em solid #0bd3b4;
+        
         background-color: rgba(64, 63, 63,.7);
     }
 }

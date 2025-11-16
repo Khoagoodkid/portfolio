@@ -59,6 +59,9 @@ function About() {
         <div className='aboutBody'>
 
             <NavBar />
+            <img src="./background.png"
+            className='aboutBackground'
+            />
             <div className='aboutContainer'
                 ref={eduRef}
             >

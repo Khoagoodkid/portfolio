@@ -6,31 +6,36 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #111;
+    /* background-color: #111; */
     display: flex;
+    overflow-y:hidden;
     /* flex-wrap: wrap; */
     /* height: auto; */
+    color: black;
 }
 
 .aboutContainer {
-    /* background-color: #1d1d1d; */
-    /* padding-top: 5em; */
-    background-color: #111;
     width: 100%;
-    /* height: 100%; */
-    display: flex;
-    /* flex-wrap: wrap; */
-    height: auto;
-    
-    flex-direction: column;
-    /* justify-content: center; */
+    height: 100%;
     position: relative;
-    /* justify-content: center; */
-    align-items: center;
-    color: white;
-    overflow-y: scroll;
+    /* background-color: aliceblue; */
     overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    color: white;
+    z-index: 1;
     padding-bottom: 3em;
+}
+.aboutBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
 }
 
 

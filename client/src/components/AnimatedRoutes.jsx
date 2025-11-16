@@ -7,6 +7,7 @@ import Skills from '../pages/Skills/Skills'
 import Work from '../pages/Work/Work'
 import { AnimatePresence } from 'framer-motion'
 import SlideModal from '../pages/SlideModal/SlideModal'
+import Dummy from '../pages/Dummy/Dummy'
 export default function AnimatedRoutes() {
     const location = useLocation()
     return (
@@ -19,6 +20,7 @@ export default function AnimatedRoutes() {
                 <Route path='/work' element={<Work />} />
                 <Route path='/skills' element={<Skills />} />
                 <Route path= '/work/project/:name' element={<SlideModal/>}/>
+                {/* <Route path='/dummy' element={<Dummy />} /> */}
             </Routes>
         </AnimatePresence>
 

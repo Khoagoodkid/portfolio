@@ -23,7 +23,7 @@
   font-style: normal;
   
 }
-p::selection, span::selection, h1::selection, h2::selection {
+*::selection {
   background-color: #0bd3b4;
   color:#111
 }
