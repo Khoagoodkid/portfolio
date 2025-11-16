@@ -28,8 +28,8 @@ jobs:
             git reset --hard origin/main
             git pull origin main
 
-            echo "VITE_API_BASE=${{ secrets.VITE_API_BASE }}" >> ./client/.env
-            echo "APP_PASS=${{ secrets.APP_PASS }}" >> ./server/.env
+            echo "VITE_API_BASE=${{ secrets.VITE_API_BASE }}" > ./client/.env
+            echo "APP_PASS=${{ secrets.APP_PASS }}" > ./server/.env
             echo "PORT=${{ secrets.PORT }}" >> ./server/.env
 
             echo "Building docker images..."
