@@ -1,10 +1,12 @@
 import React from "react";
 import "./SkillsHero.css";
-import { MonitorIcon } from "@mui/icons-material/Monitor";
 import { motion } from "framer-motion";
 import CodeIcon from '@mui/icons-material/Code';
 import SecurityIcon from '@mui/icons-material/Security';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
+import TerminalIcon from '@mui/icons-material/Terminal';
+import StorageIcon from '@mui/icons-material/Storage';
+import PsychologyIcon from '@mui/icons-material/Psychology';
 
 const FeatureCard = ({ title, description, icon, barColor }) => (
   <motion.div 
@@ -47,28 +49,97 @@ export const SkillsHero = () => {
 
   return (
     <section className="skills-hero">
-      <img
-        src={
-          "https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-c320-51f7-a850-63e1f9270c29/raw?se=2025-04-07T02%3A19%3A58Z&sp=r&sv=2024-08-04&sr=b&scid=2e3d9449-bc27-5401-adb7-27aaad674cac&skoid=fa7966e7-f8ea-483c-919a-13acfd61d696&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-06T12%3A04%3A19Z&ske=2025-04-07T12%3A04%3A19Z&sks=b&skv=2024-08-04&sig=s07K%2B0wQFGsRCmd5q/akCHQmKTotomb054L14UPUkS0%3D"
-        }
-        alt="hero"
-        className="hero-image"
-      />
       <div className="hero-content">
-        <div className="hero-text">
-          <h1 className="hero-title">
-            My Skills
-            <br />
-            and Services
-          </h1>
-          <p className="hero-subtitle">
-            I&apos;m passionate about Web Development and Machine Learning,
-            especially how they solve real-world problems. I also enjoy Game
-            Development for its blend of creativity and technical challenge.
-          </p>
-          <a href="#learn-more" className="hero-cta">
-            Learn more
-          </a>
+        <div className="hero-title-section">
+          <div className="hero-text">
+            <h1 className="hero-title">
+              My Skills
+              <br />
+              and Services
+            </h1>
+            <p className="hero-subtitle">
+              I&apos;m passionate about Web Development and Machine Learning,
+              especially how they solve real-world problems. I also enjoy Game
+              Development for its blend of creativity and technical challenge.
+            </p>
+            <a href="#learn-more" className="hero-cta">
+              Learn more
+            </a>
+          </div>
+          <div className="hero-visual-background">
+            <motion.div 
+              className="floating-orb"
+              animate={{
+                y: [0, -30, 0],
+                scale: [1, 1.15, 1],
+                rotate: [0, 180, 360]
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            >
+              <div className="orb-glow"></div>
+            </motion.div>
+            <div className="floating-icons">
+              {[
+                { Icon: CodeIcon, delay: 0, x: 0, y: -180 },
+                { Icon: TerminalIcon, delay: 0.5, x: 180, y: 0 },
+                { Icon: StorageIcon, delay: 1, x: 0, y: 180 },
+                { Icon: PsychologyIcon, delay: 1.5, x: -180, y: 0 }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="floating-icon"
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{
+                    opacity: [0.5, 0.9, 0.5],
+                    scale: [0.9, 1.1, 0.9],
+                    x: item.x,
+                    y: item.y,
+                    rotate: [0, 360]
+                  }}
+                  transition={{
+                    opacity: {
+                      duration: 3,
+                      repeat: Infinity,
+                      delay: item.delay
+                    },
+                    scale: {
+                      duration: 2,
+                      repeat: Infinity,
+                      delay: item.delay
+                    },
+                    rotate: {
+                      duration: 10,
+                      repeat: Infinity,
+                      delay: item.delay,
+                      ease: "linear"
+                    },
+                    x: {
+                      duration: 4,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      delay: item.delay
+                    },
+                    y: {
+                      duration: 5,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      delay: item.delay
+                    },
+                    default: {
+                      duration: 0.8,
+                      delay: item.delay
+                    }
+                  }}
+                >
+                  <item.Icon style={{ fontSize: '3.5rem', color: '#0bd3b4' }} />
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="features-grid">

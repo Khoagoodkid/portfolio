@@ -11,38 +11,28 @@ import ExpCard from "../../components/ExpCard/ExpCard";
 import Reveal from "../../components/Reveal/Reveal";
 import { motion } from "framer-motion";
 import { SkillsHero } from "../../components/SkillsHero/SkillsHero";
+import { TechniquesSection } from "../../components/TechniquesSection/TechniquesSection";
+import { SectionHeader } from "../../components/SectionHeader/SectionHeader";
 
-const skills = [
-  { name: "ReactJS", x: "-28vw", y: "-5vw" },
-  { name: "NextJS", x: "-10vw", y: "-8vw" },
-  { name: "Javascript", x: "20vw", y: "6vw" },
-  { name: "Python", x: "0vw", y: "12vw" },
-  { name: "PHP", x: "-20vw", y: "-15vw" },
-  { name: "C++", x: "15vw", y: "-12vw" },
-  { name: "MongoDB", x: "25vw", y: "-5vw" },
-  { name: "Tailwindcss", x: "-22vw", y: "4vw" },
-  { name: "PostgreSQL", x: "18vw", y: "18vw" },
-  { name: "Nodejs", x: "20vw", y: "-21.65vw" },
-  { name: "Laravel", x: "-10vw", y: "-21.65vw" },
-  { name: "Firebase", x: "-5.73vw", y: "23.78vw" },
-  { name: "Typescript", x: "0vw", y: "-15vw" },
-  { name: "FastAPI", x: "-25vw", y: "18vw" },
-  { name: "C#", x: "30vw", y: "13vw" },
-];
-const services = [
-  {
-    name: "User Experience / User Interface",
-    img: <MonitorIcon />,
+const skillsCategories = {
+  languages: {
+    name: "Languages",
+    skills: ["Javascript", "Python", "PHP", "C++", "C#", "Typescript"]
   },
-  {
-    name: "Game Development",
-    img: <SportsEsportsIcon />,
+  frameworks: {
+    name: "Frameworks & Libraries",
+    skills: ["ReactJS", "NextJS", "Nodejs", "Laravel", "FastAPI", "NestJS", "GraphQL", "Tailwindcss", "REST API"]
   },
-  {
-    name: "AI Engineering",
-    img: <SmartToyIcon />,
+  deployment: {
+    name: "Deployment & DevOps",
+    skills: ["Docker", "CI/CD", "GitHub Actions", "AWS S3", "AWS EC2"]
   },
-];
+  databases: {
+    name: "Databases",
+    skills: ["MongoDB", "PostgreSQL", "Firebase", "Redis"]
+  }
+};
+
 const exp = [
   {
     company: "University of Manitoba",
@@ -108,23 +98,6 @@ const exp = [
   },
 ];
 
-const SkillItem = ({ name, x, y }) => {
-  return (
-    <motion.div
-      className="skill-item"
-      // whileHover={{background:'#0bd3b4', color:'#111'}}
-      initial={{ x: 0, y: 0 }}
-      whileInView={{ x: x, y: y, transition: { duration: 1.5, delay: 0.5 } }}
-      viewport={{ once: true }}
-      exit
-      // transition={{duration:1.5,delay:.5}}
-      exitHover={{ x: 0, y: 0, background: "#111" }}
-    >
-      <span>{name}</span>
-    </motion.div>
-  );
-};
-
 function Skills() {
   const [isShown, setIsShown] = useState(false);
   useEffect(() => {
@@ -157,7 +130,6 @@ function Skills() {
   return (
     <div className="skillsBody">
       <NavBar />
-      <img src="./background.png" className="aboutBackground" />
 
       <div className="skillsContainer">
         {/* <img src="https://img.freepik.com/free-photo/gradient-blue-abstract-background-smooth-dark-blue-with-black-vignette-studio_1258-67242.jpg?t=st=1743963724~exp=1743967324~hmac=7999126c183525e0383c193a6fe645f829b6ae9e294ef9078665183fec506aaf&w=740"
@@ -168,35 +140,13 @@ function Skills() {
         {isShown && (
           <>
             <SkillsHero/>
-            <div className="framework-container">
-              <div className="title">
-                <Reveal>
-                  <h2>Techniques </h2>
-                </Reveal>
-
-                <h2 style={{ color: "#0bd3b4" }}>.</h2>
-
-                <div className="line"></div>
-              </div>
-              <div className="cube">
-                <div className="cube-center">
-                  <span>WEB</span>
-                </div>
-                {skills.map((s, index) => {
-                  return (
-                    <SkillItem name={s.name} x={s.x} y={s.y} key={index} />
-                  );
-                })}
-              </div>
-            </div>
+            <TechniquesSection skillsCategories={skillsCategories} />
             <div className="exp-container">
-              <div className="title">
-                <h2 style={{ color: "#0bd3b4" }}>.</h2>
-                <Reveal>
-                  <h2>Experience </h2>
-                </Reveal>
-                <div className="line"></div>
-              </div>
+              <SectionHeader 
+                sectionNumber="03"
+                title="Experience"
+                centered={true}
+              />
 
               <div className="exp-cards">
                 {exp.map((e, index) => {
@@ -216,7 +166,7 @@ function Skills() {
                   );
                 })}
               </div>
-              <h2>Updating...</h2>
+              <h2 style={{ marginTop: '2em', opacity: 0.6, fontSize: '1.2rem' }}>Updating...</h2>
             </div>
           </>
         )}

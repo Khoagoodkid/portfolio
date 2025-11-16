@@ -3,7 +3,6 @@ import NavBar from '../../components/NavBar/NavBar'
 import "./About.css"
 
 import Loading from '../../components/Loading/Loading'
-import FrameworkSlider from '../../components/FrameworkSlider/FrameworkSlider'
 import profilePic from '../../assets/profilePic.jpg'
 import PhoneIcon from '@mui/icons-material/Phone';
 import CakeIcon from '@mui/icons-material/Cake';
@@ -14,7 +13,8 @@ import { PageContext } from '../../App'
 import TopBar from '../../components/TopBar/TopBar'
 import Reveal from '../../components/Reveal/Reveal'
 import { educations } from '../../works'
-import { motion, useScroll } from 'framer-motion'
+import { motion } from 'framer-motion'
+import { SectionHeader } from '../../components/SectionHeader/SectionHeader'
 export const profile = [
     {
         name: 'birthday',
@@ -41,129 +41,137 @@ export const profile = [
 function About() {
     const { page, setPage } = useContext(PageContext)
     const [isShown, setIsShown] = useState(false);
-    const eduRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: eduRef,
-        offset: ["start end", "center start"]
-    })
-    useEffect(() => {
-        console.log(scrollYProgress)
-    },[scrollYProgress])
+    
     useEffect(() => {
         setTimeout(() => {
             setIsShown(true);
         }, [3000]);
-
     }, []);
+
     return (
         <div className='aboutBody'>
-
             <NavBar />
-            <img src="./background.png"
-            className='aboutBackground'
-            />
-            <div className='aboutContainer'
-                ref={eduRef}
-            >
+            <div className='aboutContainer'>
                 <TopBar />
                 <Loading />
                 {isShown &&
                     <>
-                        <div className="infoContainer">
-                            <div className='profilePicture'>
+                        <section className="about-hero">
+                            <div className="about-hero-content">
+                                <motion.div 
+                                    className="profile-image-wrapper"
+                                    initial={{ opacity: 0, scale: 0.8 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.8, delay: 0.3 }}
+                                >
+                                    <div className="profile-image-glow"></div>
+                                    <img src={profilePic} alt="Profile" className="profile-image" />
+                                    <div className="profile-image-border"></div>
+                                </motion.div>
 
-                                <img src={profilePic} />
-                                <div className='layout'>
+                                <div className="about-intro">
+                                    <SectionHeader 
+                                        sectionNumber="01"
+                                        title="About Me"
+                                    />
 
-                                </div>
-
-
-                            </div>
-
-                            <div className='infoText'>
-                                <Reveal>
-
-                                    <h1 style={{ color: '#0bd3b4', fontFamily: 'Gloria Hallelujah, cursive', fontWeight: 'bold' }}>Me, Myself & I</h1>
-                                </Reveal>
-
-                                <Reveal>
-
-                                    <p>I'm mainly a Vietnamese web developer living in Winnipeg, Canada.
-                                        I have an unfathomable passion for developing sophisticated logic, advanced web services, and web design.
-                                    </p>
-                                </Reveal>
-                                <Reveal>
-                                    <p>
-                                        A creative web developer,  problem solver,  hard-working individual, and a well-prepared man. I
-                                        always figure out and welcome new unusual initatives for projects.
-                                    </p>
-
-                                </Reveal>
-                                <div className='details'>
-                                    {profile.map((p, i) => {
-                                        return (
-                                            <Reveal key={i}>
-
-                                                <div  className='detailCard'>
-
-
-                                                    <div>{p.img}</div>
-                                                    <span>{p.text}</span>
-                                                </div>
-                                            </Reveal>
-                                        )
-                                    })}
-                                </div>
-                                <Link to='/work'>
                                     <Reveal>
-
-                                        <button onClick={() => setPage('work')}>View my projects</button>
+                                        <p className="intro-description">
+                                            I'm a Vietnamese web developer living in Winnipeg, Canada.
+                                            I have an unfathomable passion for developing sophisticated logic, 
+                                            advanced web services, and web design.
+                                        </p>
                                     </Reveal>
-                                </Link>
 
+                                    <Reveal>
+                                        <p className="intro-description">
+                                            A creative web developer, problem solver, hard-working individual, 
+                                            and a well-prepared man. I always figure out and welcome new unusual 
+                                            initiatives for projects.
+                                        </p>
+                                    </Reveal>
+
+                                    <div className='profile-details'>
+                                        {profile.map((p, i) => (
+                                            <motion.div
+                                                key={i}
+                                                className='profile-detail-card'
+                                                initial={{ opacity: 0, x: -20 }}
+                                                animate={{ opacity: 1, x: 0 }}
+                                                transition={{ duration: 0.5, delay: 0.5 + i * 0.1 }}
+                                                whileHover={{ scale: 1.05, x: 5 }}
+                                            >
+                                                <div className="detail-icon">{p.img}</div>
+                                                <span className="detail-text">{p.text}</span>
+                                            </motion.div>
+                                        ))}
+                                    </div>
+
+                                    <Reveal>
+                                        <Link to='/work' className="projects-button">
+                                            <button onClick={() => setPage('work')}>
+                                                View my projects
+                                            </button>
+                                        </Link>
+                                    </Reveal>
+                                </div>
                             </div>
-                        </div>
-                        <div className='eduContainer' >
-                            <h1 style={{ fontFamily: 'poppin-bold', fontSize: '4em' }}>Education</h1>
-                        
+                        </section>
+
+                        <section className='education-section'>
+                            <div className="education-container">
+                                <SectionHeader 
+                                    sectionNumber="02"
+                                    title="Education"
+                                    centered={true}
+                                />
                                
-                                <ul className='edu-display'  >
-                                    {educations.map((edu, i) => {
-
-                                        return (
-                                            <EduCard edu={edu} key={i} />
-                                        )
-                                    })}
-                                </ul>
-
-                          
-                        </div>
+                                <div className='education-timeline'>
+                                    {educations.map((edu, i) => (
+                                        <EduCard edu={edu} key={i} index={i} />
+                                    ))}
+                                </div>
+                            </div>
+                        </section>
                     </>
                 }
             </div>
         </div>
     )
 }
-const EduCard = ({ edu}) => {
+const EduCard = ({ edu, index }) => {
     const { name, organization, subtitle, startDate, endDate, descriptions } = edu
     return (
-        <motion.li
-            initial={{ opacity: 0, y: 100 }}
-
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: .5 }}
+        <motion.div
             className='edu-card'
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
         >
-            <h2>{name} <span>@{organization}</span></h2>
-            <subtitle>{startDate} - {endDate} | {subtitle}</subtitle>
-            <div className='edu-description'>
-                {descriptions.map((des, i) => {
-                    return (
+            <div className="edu-card-content">
+                <div className="edu-card-header">
+                    <div className="edu-card-icon">
+                        <div className="icon-dot"></div>
+                    </div>
+                    <div className="edu-card-info">
+                        <h3 className="edu-name">{name}</h3>
+                        <span className="edu-organization">@{organization}</span>
+                    </div>
+                </div>
+                <div className="edu-card-meta">
+                    <span className="edu-dates">{startDate} - {endDate}</span>
+                    <span className="edu-separator">•</span>
+                    <span className="edu-subtitle">{subtitle}</span>
+                </div>
+                <ul className='edu-description'>
+                    {descriptions.map((des, i) => (
                         <li key={i}>{des}</li>
-                    )
-                })}
+                    ))}
+                </ul>
             </div>
-        </motion.li>
+            <div className="edu-card-line"></div>
+        </motion.div>
     )
 }
 export default About

@@ -22,7 +22,8 @@
   flex-direction: column;
   align-items: center;
   height: auto;
-  /* padding-top: 5em; */
+  padding-bottom: 4em;
+  gap: 2em;
 }
 
 .skillsContainer .content {
@@ -90,10 +91,12 @@
 .cube {
   /* border-radius: 9999px; */
   width: 70%;
-  height: 100vh;
+  min-height: 80vh;
+  max-height: 100vh;
   /* background-color: red; */
   position: relative;
-
+  margin-top: 2em;
+  margin-bottom: 2em;
   display: flex;
   flex-wrap: wrap;
   gap: 2.5em;
@@ -140,31 +143,32 @@
   font-family: "poppin";
 }
 .framework-container {
-  padding-top: 2em;
+  padding-top: 6em;
+  padding-bottom: 4em;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 3em;
   /* background-color: red; */
   /* background-image: url("/progress_bg.png");
     background-repeat: no-repeat ;
     background-size: auto;
     background-position: top; */
 }
-.framework-container .title,
-.exp-container .title {
+.framework-container .title {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* gap: 1em; */
+  gap: 0.5em;
   width: 80%;
+  max-width: 1200px;
   justify-content: center;
-
+  margin-bottom: 1em;
   font-size: 2.5rem;
-  /* padding-right: 1em; */
+  padding: 0 2em;
 }
-.framework-container .title h2,
-.exp-container .title h2 {
+.framework-container .title h2 {
   font-family: "poppin-bold";
 }
 .line {
@@ -217,34 +221,33 @@
 }
 .exp-container {
   width: 100%;
-  height: 10em;
+  min-height: auto;
   /* background-color: red; */
-  padding-top: 3em;
+  padding-top: 4em;
+  padding-bottom: 6em;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 3em;
 }
 
-.exp-container .title {
-  flex-direction: row-reverse;
-}
-.exp-container .title .line {
-  margin-left: 0;
-  margin-right: 0.5em;
-}
 .exp-container .exp-cards {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 2.5em;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2em;
 }
 @media screen and (max-width: 668px) {
   .skillsContainer {
     flex-direction: column;
     align-items: center;
     padding-left: 1em;
-    /* gap: 3em; */
-    /* padding-top: 10em; */
+    gap: 0em;
+    padding-bottom: 2em;
   }
 
   .skillsContainer .display {
@@ -285,21 +288,30 @@
     border: none;
   }
   .framework-container {
-    margin-top: 6em;
+    margin-top: 4em;
     /* background-color: red; */
     padding: 1em;
+    padding-top: 4em;
+    padding-bottom: 3em;
+    gap: 2em;
   }
-  .framework-container .title,
-  .exp-container .title {
+  .framework-container .title {
     width: 100%;
     /* padding: 1em; */
   }
-  .framework-container .title h2,
-  .exp-container .title h2 {
+  .framework-container .title h2 {
     font-size: 1em;
   }
   .exp-container {
-    /* padding-left: 1em; */
+    padding-top: 3em;
+    padding-bottom: 4em;
+    gap: 2em;
+    margin-top: 0;
+  }
+  
+  .exp-container .exp-cards {
+    gap: 2em;
+    padding: 0 1em;
   }
   .line {
     width: 20%;
@@ -310,21 +322,23 @@
   .skillsContainer {
     flex-direction: column;
     align-items: center;
-    /* gap: 3em; */
-  }
-  .cube {
+    gap: 1.5em;
   }
   .skillsContainer .display {
     /* background-color: red; */
     width: 100%;
   }
-  .framework-container .title,
-  .exp-container .title {
-    width: 90%;
+  .framework-container {
+    padding-top: 5em;
+    padding-bottom: 3em;
+    gap: 2.5em;
   }
-  .framework-container .title h2,
-  .exp-container .title h2 {
-    font-size: 1em;
+  .framework-container .title {
+    width: 90%;
+    padding: 0 1.5em;
+  }
+  .framework-container .title h2 {
+    font-size: 2rem;
   }
   .line {
     width: 40%;
@@ -332,7 +346,10 @@
   .cube {
     /* border-radius: 9999px; */
     width: 80%;
-    height: 60vh;
+    min-height: 70vh;
+    max-height: 90vh;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
     /* background-color: red; */
     background-size: cover;
     background: repeating-radial-gradient(
@@ -341,12 +358,13 @@
       #111 60px
     );
   }
-  .cube span {
+  .exp-container {
+    padding-top: 3.5em;
+    padding-bottom: 5em;
+    gap: 2.5em;
   }
-  .cube .cube-center {
-  }
-  .skill-item {
-  }
-  .skill-item span {
+  .exp-container .exp-cards {
+    gap: 2.25em;
+    padding: 0 1.5em;
   }
 }

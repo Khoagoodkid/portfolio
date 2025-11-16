@@ -10,6 +10,7 @@ import Reveal from '../../components/Reveal/Reveal'
 import { ProjectCard } from '../../components/ProjectCard/ProjectCard'
 import { FrontendSlider } from '../../components/FrontendSlider/FrontendSlider'
 import TopBar from '../../components/TopBar/TopBar'
+import { SectionHeader } from '../../components/SectionHeader/SectionHeader'
 function Work() {
     const settings = {
         dots: true,
@@ -78,16 +79,11 @@ function Work() {
 
 
                     <div className='projects'>
-
-                        <div className="title">
-                            <Reveal>
-                                <h2>Projects </h2>
-
-                            </Reveal>
-                            <h2 style={{ color: "#0bd3b4" }}>.</h2>
-                            <div className="line"></div>
-
-                        </div>
+                        <SectionHeader 
+                            sectionNumber="02"
+                            title="Projects"
+                            centered={true}
+                        />
                         <div className='project-display'>
 
                             {slides.map((project) => {

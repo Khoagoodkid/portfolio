@@ -7,7 +7,7 @@ function ExpCard({ company, role, description, start_at, end_at, location, props
       <div className='expcard-body'>
         <div className='row-1'>
           <Reveal>
-            <h2>{company}</h2>
+            <h2 style={{textAlign:'left'}}>{company}</h2>
           </Reveal>
           <Reveal>
             <b style={{ fontFamily: 'poppin' }}>{start_at} - {end_at}</b>
@@ -16,10 +16,10 @@ function ExpCard({ company, role, description, start_at, end_at, location, props
 
         <div className='row-2'>
           <Reveal>
-            <span>{role}</span>
+            <span style={{textAlign:'left'}}>{role}</span>
           </Reveal>
           <Reveal>
-            <b style={{ fontFamily: 'poppin' }}>{location}</b>
+            <b style={{ fontFamily: 'poppin', textAlign:'right' }}>{location}</b>
 
           </Reveal>
         </div>
