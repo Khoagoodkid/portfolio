@@ -12,7 +12,10 @@ RUN npm run build
 
 # Production using nginx
 FROM nginx:alpine
-COPY --from=builder /app/dist /usr/share/nginx/html
 
+RUN mkdir -p /var/www/teddystack/dist
+
+# Copy built files
+COPY --from=builder /app/dist /var/www/teddystack/dist
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
