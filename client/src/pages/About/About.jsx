@@ -15,6 +15,7 @@ import Reveal from '../../components/Reveal/Reveal'
 import { educations } from '../../works'
 import { motion } from 'framer-motion'
 import { SectionHeader } from '../../components/SectionHeader/SectionHeader'
+import { axiosInstance } from '../../api/axiosInstance'
 export const profile = [
     {
         name: 'birthday',
@@ -41,12 +42,57 @@ export const profile = [
 function About() {
     const { page, setPage } = useContext(PageContext)
     const [isShown, setIsShown] = useState(false);
+    const [generalInfo, setGeneralInfo] = useState(null);
     
     useEffect(() => {
         setTimeout(() => {
             setIsShown(true);
         }, [3000]);
     }, []);
+
+    useEffect(() => {
+        const getGeneralInfo = async () => {
+            try {
+                const { data } = await axiosInstance.get('/general-info');
+                if (Array.isArray(data)) {
+                    setGeneralInfo(data[0] || null);
+                    return;
+                }
+                setGeneralInfo(data || null);
+            } catch (error) {
+                console.error('Failed to fetch general info', error);
+                setGeneralInfo(null);
+            }
+        };
+
+        getGeneralInfo();
+    }, []);
+
+  
+    const aboutDescription = generalInfo?.description || "I'm a Vietnamese web developer living in Winnipeg, Canada. I have an unfathomable passion for developing sophisticated logic, advanced web services, and web design.";
+
+    const profileDetails = [
+        {
+            name: 'birthday',
+            text: generalInfo?.birthdate || profile[0].text,
+            img: <CakeIcon />
+        },
+        {
+            name: 'phone',
+            text: generalInfo?.phone || profile[1].text,
+            img: <PhoneIcon />
+        },
+        {
+            name: 'address',
+            text: generalInfo?.location || profile[2].text,
+            img: <LocationOnIcon />
+        },
+        {
+            name: 'email',
+            text: generalInfo?.email || profile[3].text,
+            img: <EmailIcon />
+        },
+    ];
 
     return (
         <div className='aboutBody'>
@@ -77,22 +123,12 @@ function About() {
 
                                     <Reveal>
                                         <p className="intro-description">
-                                            I'm a Vietnamese web developer living in Winnipeg, Canada.
-                                            I have an unfathomable passion for developing sophisticated logic, 
-                                            advanced web services, and web design.
-                                        </p>
-                                    </Reveal>
-
-                                    <Reveal>
-                                        <p className="intro-description">
-                                            A creative web developer, problem solver, hard-working individual, 
-                                            and a well-prepared man. I always figure out and welcome new unusual 
-                                            initiatives for projects.
+                                            {aboutDescription}
                                         </p>
                                     </Reveal>
 
                                     <div className='profile-details'>
-                                        {profile.map((p, i) => (
+                                        {profileDetails.map((p, i) => (
                                             <motion.div
                                                 key={i}
                                                 className='profile-detail-card'

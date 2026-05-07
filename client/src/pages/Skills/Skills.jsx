@@ -13,6 +13,43 @@ import { motion } from "framer-motion";
 import { SkillsHero } from "../../components/SkillsHero/SkillsHero";
 import { TechniquesSection } from "../../components/TechniquesSection/TechniquesSection";
 import { SectionHeader } from "../../components/SectionHeader/SectionHeader";
+import { axiosInstance } from "../../api/axiosInstance";
+
+const parseMonthYear = (value) => {
+  if (!value || typeof value !== "string") return 0;
+  const [monthRaw, yearRaw] = value.split("/");
+  const month = Number(monthRaw);
+  const year = Number(yearRaw);
+
+  if (!Number.isFinite(month) || !Number.isFinite(year)) return 0;
+  return year * 100 + month;
+};
+
+const isPresentDate = (value) =>
+  typeof value === "string" && value.trim().toLowerCase() === "present";
+
+const sortExperiencesByTime = (items) =>
+  [...items].sort((a, b) => {
+    const aIsPresent = isPresentDate(a.end_date);
+    const bIsPresent = isPresentDate(b.end_date);
+
+    if (aIsPresent && bIsPresent) {
+      const aStart = parseMonthYear(a.start_date);
+      const bStart = parseMonthYear(b.start_date);
+      return bStart - aStart;
+    }
+
+    if (aIsPresent) return -1;
+    if (bIsPresent) return 1;
+
+    const aEnd = a.is_active ? Number.MAX_SAFE_INTEGER : parseMonthYear(a.end_date);
+    const bEnd = b.is_active ? Number.MAX_SAFE_INTEGER : parseMonthYear(b.end_date);
+    if (bEnd !== aEnd) return bEnd - aEnd;
+
+    const aStart = parseMonthYear(a.start_date);
+    const bStart = parseMonthYear(b.start_date);
+    return bStart - aStart;
+  });
 
 const skillsCategories = {
   languages: {
@@ -33,77 +70,29 @@ const skillsCategories = {
   }
 };
 
-const exp = [
-  {
-    company: "University of Manitoba",
-    role: "Incoming Research Assistant",
-    description: [
-      "Working on a project investigating a problem named Cops and Robbers",
-      "Research on a variation of graph-based problems, e.g. How many cops are needed to catch a robber in a graph?",
-      "Discuss and figure out the optimal algorithm for the problem",
-    ],
-    props: ["Graph Theory", "Distributed Algorithms", "Research"],
-    start_at: "5/2025",
-    end_at: "8/2025",
-    location: "Winnipeg, Canada",
-  },
-  {
-    company: "NPH Digital",
-    role: "Front End Web Developer Intern",
-    description: [
-      // 'Developed a front-end web application with NextJS',
-      // 'Implemented responsive headers for both desktop and mobile platforms with multiple features.',
-      // 'Developed responsive Nodes and Tokens pages, ensuring seamless user experience across devices.'
-    ],
-    props: ["Nextjs", "Typescript", "Git", "Github", "Tailwind Css", "Figma"],
-    start_at: "2/2025",
-    end_at: "Present",
-    location: "Winnipeg, Canada",
-  },
-  {
-    company: "Myria",
-    role: "Software Engineer",
-    description: [
-      "Developed a front-end web application with NextJS",
-      "Implemented responsive headers for both desktop and mobile platforms with multiple features.",
-      "Developed responsive Nodes and Tokens pages, ensuring seamless user experience across devices.",
-    ],
-    props: ["Nextjs", "Typescript", "Git", "Github", "Tailwind Css", "Figma"],
-    start_at: "12/2023",
-    end_at: "1/2024",
-    location: "Winnipeg, Canada",
-  },
-  {
-    company: "Kayapay.ai",
-    role: "Software Engineer",
-    description: [
-      "Engaged in a 3-month contract to develop a full-stack web application using with FastAPI serving a REST API with NextJS as the frontend as well as integrating with AI",
-      "Assisted in receiving data from AI and automatically sending messages to user via a bot",
-      "Building tables and graphs for tracking prices",
-      "Implemented converting AI’s data to costly usable data",
-    ],
-    props: [
-      "React",
-      "Typescript",
-      "Python",
-      "Postgresql",
-      "Fast API",
-      "Git",
-      "Github",
-      "RESTful API",
-    ],
-    start_at: "9/2023",
-    end_at: "11/2023",
-    location: "Winnipeg, Canada",
-  },
-];
-
 function Skills() {
   const [isShown, setIsShown] = useState(false);
+  const [experiences, setExperiences] = useState([]);
   useEffect(() => {
     setTimeout(() => {
       setIsShown(true);
     }, [3000]);
+  }, []);
+
+  useEffect(() => {
+    const getExperiences = async () => {
+      try {
+        const { data } = await axiosInstance.get("/experiences");
+        setExperiences(
+          Array.isArray(data) ? sortExperiencesByTime(data) : []
+        );
+      } catch (error) {
+        console.error("Failed to fetch experiences", error);
+        setExperiences([]);
+      }
+    };
+
+    getExperiences();
   }, []);
 
   const skillsItems = [
@@ -149,24 +138,29 @@ function Skills() {
               />
 
               <div className="exp-cards">
-                {exp.map((e, index) => {
+                {experiences.map((e) => {
+                  const descriptionItems =
+                    typeof e.description === "string"
+                      ? e.description
+                          .split(/\r?\n+/)
+                          .map((item) => item.trim())
+                          .filter(Boolean)
+                      : [];
+
                   return (
-                    <>
-                      <ExpCard
-                        key={index}
-                        company={e.company}
-                        role={e.role}
-                        start_at={e.start_at}
-                        end_at={e.end_at}
-                        props={e.props}
-                        description={e.description}
-                        location={e.location}
-                      />
-                    </>
+                    <ExpCard
+                      key={e.id}
+                      company={e.company}
+                      role={e.title}
+                      start_at={e.start_date}
+                      end_at={e.end_date || (e.is_active ? "Present" : "")}
+                      props={Array.isArray(e.tags) ? e.tags : []}
+                      description={descriptionItems}
+                      location={e.location}
+                    />
                   );
                 })}
               </div>
-              <h2 style={{ marginTop: '2em', opacity: 0.6, fontSize: '1.2rem' }}>Updating...</h2>
             </div>
           </>
         )}
