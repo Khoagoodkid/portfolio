@@ -25,7 +25,7 @@ function Home() {
     useEffect(() => {
         const trackVisit = async () => {
             try {
-                await axiosInstance.post('/visits')
+                await axiosInstance.post('/visits/')
             } catch (error) {
             }
         }
