@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom'
 import { PageContext } from '../../App'
 import TopBar from '../../components/TopBar/TopBar'
 import Reveal from '../../components/Reveal/Reveal'
+import { axiosInstance } from '../../api/axiosInstance'
 function Home() {
     const { page, setPage } = useContext(PageContext)
     const [isShown, setIsShown] = useState(false);
@@ -20,6 +21,17 @@ function Home() {
         }, [3000]);
 
     }, []);
+
+    useEffect(() => {
+        const trackVisit = async () => {
+            try {
+                await axiosInstance.post('/visits')
+            } catch (error) {
+            }
+        }
+
+        trackVisit()
+    }, [])
     return (
         <div className='homeBody'>
 
