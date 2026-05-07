@@ -4,13 +4,14 @@ import NavBar from '../../components/NavBar/NavBar'
 import Loading from '../../components/Loading/Loading'
 import { profile } from '../About/About'
 import map from '../../assets/map-can.jpg'
-import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Reveal from '../../components/Reveal/Reveal'
-import TopBar, { socials } from '../../components/TopBar/TopBar'
+import TopBar from '../../components/TopBar/TopBar'
 import { SectionHeader } from '../../components/SectionHeader/SectionHeader'
 import { motion } from 'framer-motion'
+import { axiosInstance } from '../../api/axiosInstance';
+import { useSocialLinks } from '../../hooks/useSocialLinks';
 function Contact() {
     const [user, setUser] = useState({
         email: '',
@@ -18,6 +19,7 @@ function Contact() {
         text: ''
     })
     const [isShown, setIsShown] = useState(false);
+    const socials = useSocialLinks();
     useEffect(() => {
         setTimeout(() => {
             setIsShown(true);
@@ -30,9 +32,7 @@ function Contact() {
             toast.error("Please fill the form before submitting")
             return;
         }
-        const api = import.meta.env.VITE_API_BASE + "/email"
-        // const api = 'http://localhost:3000/email'
-        axios.post(api, user)
+        axiosInstance.post("/email", user)
         setUser({
             email: '',
             name: '',
@@ -155,6 +155,7 @@ function Contact() {
                             
                             <div className='social-links-grid'>
                                 {socials.map((app, i) => {
+                                    const Icon = app.Icon;
                                     return (
                                         <motion.a
                                             key={i}
@@ -166,7 +167,9 @@ function Contact() {
                                             transition={{ duration: 0.5, delay: i * 0.1 }}
                                             whileHover={{ scale: 1.1, y: -5 }}
                                         >
-                                            <div className='social-link-icon'>{app.icon}</div>
+                                            <div className='social-link-icon'>
+                                                {Icon ? <Icon className='icon' /> : null}
+                                            </div>
                                         </motion.a>
                                     )
                                 })}

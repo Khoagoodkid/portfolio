@@ -1,40 +1,20 @@
 import React from 'react'
 import "./TopBar.css"
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-export const socials = [
-    {
-        name:'facebook',
-        icon:  <FacebookIcon className='icon'/>,
-        link:'https://www.facebook.com/chendenhall.james/'
-        
-    }, {
-        name:'instagram',
-        icon:  <InstagramIcon className='icon'/>,
-        link:'https://www.instagram.com/_coder.life/'
-    }, {
-        name:'github',
-        icon:  <GitHubIcon className='icon'/>,
-        link:'https://github.com/Khoagoodkid'
-    }, {
-        name:'linkedin',
-        icon:  <LinkedInIcon className='icon'/>,
-        link:'https://www.linkedin.com/in/james-ha-60488a327/'
-    }
-]
+import { useSocialLinks } from '../../hooks/useSocialLinks';
 
 function TopBar() {
+  const socials = useSocialLinks();
+
   return (
     <div className='topbar-body'>
         <nav className="socials">   
                    {socials.map((app,i) => {
+                        const Icon = app.Icon;
                         return (
                             <a className='app' 
                             onClick={()=>window.open(app.link)}
                             key={i}>
-                                <>{app.icon}</>
+                                {Icon ? <Icon className='icon' /> : null}
 
                             </a>
                         )
